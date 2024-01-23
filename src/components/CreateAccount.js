@@ -1,7 +1,6 @@
 import React from 'react'
 
 import checkBox from '../assets/images/Checkbox.png';
-import connectIcons from '../assets/images/connect.png';
 import facebook from '../assets/images/facebook.png';
 import gmail from '../assets/images/gmail.png';
 import twitter from '../assets/images/twitter.png';
@@ -9,8 +8,8 @@ import linkedIn from '../assets/images/linkedIn.png';
 
 
 
-import '../styles/createAccount.css';
-import LeftBackground from './LeftBackground';
+
+import RightBackground from './RightBackground';
 
 
 
@@ -61,7 +60,7 @@ function CreateAccount() {
             <div>
                 <button className="nextButton">Next</button>
             </div>
-            <LeftBackground/>
+            <RightBackground/>
         </div>
     )
 }

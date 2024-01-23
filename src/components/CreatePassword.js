@@ -1,5 +1,5 @@
 import React from 'react'
-import LeftBackground from './LeftBackground'
+import RightBackground from './RightBackground';
 
 import '../styles/createPassword.css';
 
@@ -26,7 +26,7 @@ function CreatePassword() {
                 <button className="previousButton">Previous</button>
                 <button className="nextButton">Next</button>
             </div>
-            <LeftBackground/>
+            <RightBackground/>
         </div>
     )
 }
