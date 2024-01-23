@@ -5,6 +5,7 @@ import SidebarButton from './SidebarButton';
 import { fetchBalanceInLocaleCurrency } from './Api';
 import './App.css';  // Import the CSS file
 // Importez la bibliothèque country-currency-map
+import NotificationComponent from './NotificationComponent'; // Assurez-vous de spécifier le chemin correct
 import * as countryCurrencyMap from 'country-currency-map';
 const opencage = require('opencage-api-client');
 
@@ -12,10 +13,29 @@ const opencage = require('opencage-api-client');
 const Home = () => {
     const { iduser } = useParams();
     const [balanceInLocaleCurrency, setBalanceInLocaleCurrency] = useState(0);
+    const [curr, setCurrency] = useState(0);
     const [sidebarVisible, setSidebarVisible] = useState(true);
     const [activeButton, setActiveButton] = useState('Dashboard');
     const [userLocation, setUserLocation] = useState(null);
 // ...
+    const [notifications, setNotifications] = useState([]);
+
+    // Fonction pour afficher une notification
+    const showNotification = (message, icon) => {
+        const newNotification = { message, icon };
+        setNotifications([...notifications, newNotification]);
+
+        // Supprimer la notification après 5 secondes
+        setTimeout(() => {
+            setNotifications((prevNotifications) => prevNotifications.filter((n) => n !== newNotification));
+        }, 5000);
+    };
+
+    // Exemple : Appel de showNotification lorsque vous recevez une notification du serveur Spring Boot
+    // Remplacez cela par la logique réelle de réception des notifications de votre serveur
+    const receiveNotificationFromSpringBoot = () => {
+        showNotification('Nouvelle notification', process.env.PUBLIC_URL + '/image6.png');
+    };
 
     useEffect(() => {
         const fetchData = async () => {
@@ -66,6 +86,7 @@ const Home = () => {
 
             if (firstResult) {
                 const currencyCode = firstResult.annotations.currency.iso_code;
+                setCurrency(currencyCode);
                 console.log('currencyCode:', currencyCode); // Examinez la structure de l'objet
 
                 return currencyCode || 'USD';
@@ -94,10 +115,13 @@ const Home = () => {
     return (
         <div className="App">
             <div style={{width: '100%', height: '100%', position: 'relative', background: '#EFEFEF'}}>
-
+                <div>
+                    {/* Autre contenu de votre application */}
+                    <NotificationComponent />
+                </div>
                 <div style={{width: 220, height: 736, left: 16, top: 80, position: 'absolute', background: 'white', borderRadius: 16}} />
-                <div style={{width: 220, height: 250, left: 16, top: 830, position: 'absolute', background: 'white', borderRadius: 16}} >
-                    <p>Balance in Local Currency: {balanceInLocaleCurrency}</p>
+                <div style={{width: 220, height: 77, left: 16, top: 830, position: 'absolute', background: 'black', borderRadius: 16}} >
+                    <div style={{background: 'red',fontFamily: "math",fontWeight: 900,fontSize: "large"}}><p>Balance in Local Currency {balanceInLocaleCurrency} {curr}</p> </div>
                 </div>
                 <div style={{width: 1220, height: 100, left: 260, top: 80, position: 'absolute', background: 'white', borderRadius: 16}} >
                 </div>
