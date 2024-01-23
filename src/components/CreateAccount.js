@@ -2,6 +2,12 @@ import React from 'react'
 
 import checkBox from '../assets/images/Checkbox.png';
 import connectIcons from '../assets/images/connect.png';
+import facebook from '../assets/images/facebook.png';
+import gmail from '../assets/images/gmail.png';
+import twitter from '../assets/images/twitter.png';
+import linkedIn from '../assets/images/linkedIn.png';
+
+
 
 import '../styles/createAccount.css';
 import LeftBackground from './LeftBackground';
@@ -12,7 +18,30 @@ function CreateAccount() {
     return (
         <div className="rightSide">
             <text className="createAccount">Create Account</text>
-            <img src={connectIcons} className="icons"></img>
+            
+            <div className="icons">
+                <span>
+                    <a href="https://www.facebook.com">
+                        <img src={facebook} className="fb" alt="Facebook" />
+                    </a>
+                </span>
+                <span>
+                    <a href="https://www.gmail.com">
+                        <img src={gmail} className="gmail" alt="Gmail" />
+                    </a>
+                </span>
+                <span>
+                    <a href="https://www.twitter.com">
+                        <img src={twitter} className="x" alt="X" />
+                    </a>
+                </span>
+                <span>
+                    <a href="https://www.linkedin.com">
+                        <img src={linkedIn} className="linkedIn" alt="Linkedin" />
+                    </a>
+                </span>
+            </div>
+
             <text className="useEmailText">Or use your email account</text>
             <div className="subscribeForm">
                 <form className="formCreateAccount">
