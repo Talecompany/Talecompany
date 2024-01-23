@@ -1,0 +1,23 @@
+.signUp {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+}
+
+
+
+.signUp .leftSide {
+  width: 411px;
+  height: 816px;
+  top: 8px;
+  left: 861px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+}
+
+
+
+

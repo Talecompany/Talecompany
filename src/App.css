@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+}
+
+.logoTale {
+  width: 126px;
+  height: 37px;
+  flex-shrink: 0;
+  position: relative;
+  top: 16px;
+  left: 16px;
+}
+
