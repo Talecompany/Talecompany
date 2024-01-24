@@ -4,13 +4,15 @@ import { useParams } from 'react-router-dom';
 import SidebarButton from './SidebarButton';
 import { fetchBalanceInLocaleCurrency } from './Api';
 import './App.css';  // Import the CSS file
+import { useNavigate } from 'react-router-dom';
+
 // Importez la bibliothèque country-currency-map
-import NotificationComponent from './NotificationComponent'; // Assurez-vous de spécifier le chemin correct
 import * as countryCurrencyMap from 'country-currency-map';
 const opencage = require('opencage-api-client');
 
 
 const Home = () => {
+    const navigate = useNavigate();
     const { iduser } = useParams();
     const [balanceInLocaleCurrency, setBalanceInLocaleCurrency] = useState(0);
     const [curr, setCurrency] = useState(0);
@@ -105,6 +107,12 @@ const Home = () => {
 
     const handleButtonClick = (label) => {
         setActiveButton(label);
+        // eslint-disable-next-line react-hooks/rules-of-hooks
+        if (label === 'Assistance') {
+            console.log('iduser:', iduser);
+            // Redirection vers la route avec l'id utilisateur
+            navigate(`/assistance/${iduser}`);
+        }
         // Add specific code to execute when the button is clicked
     };
 
@@ -115,10 +123,7 @@ const Home = () => {
     return (
         <div className="App">
             <div style={{width: '100%', height: '100%', position: 'relative', background: '#EFEFEF'}}>
-                <div>
-                    {/* Autre contenu de votre application */}
-                    <NotificationComponent />
-                </div>
+
                 <div style={{width: 220, height: 736, left: 16, top: 80, position: 'absolute', background: 'white', borderRadius: 16}} />
                 <div style={{width: 220, height: 77, left: 16, top: 830, position: 'absolute', background: 'black', borderRadius: 16}} >
                     <div style={{background: 'red',fontFamily: "math",fontWeight: 900,fontSize: "large"}}><p>Balance in Local Currency {balanceInLocaleCurrency} {curr}</p> </div>
