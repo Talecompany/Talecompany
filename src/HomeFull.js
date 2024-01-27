@@ -10,6 +10,7 @@ import { useNavigate } from 'react-router-dom';
 import * as countryCurrencyMap from 'country-currency-map';
 import QuickSurveyEmpty from "./QuickSurveyEmpty";
 import Leftsidebar from "./Leftsidebar";
+import Header from "./Header";
 const opencage = require('opencage-api-client');
 
 
@@ -166,37 +167,26 @@ const Home = () => {
 
 
                 {/*---*/}
-
-                <div style={{padding: 8, left: 1376, top: 20, position: 'absolute', borderRadius: 20, justifyContent: 'flex-start', alignItems: 'flex-start', gap: 16, display: 'inline-flex'}}>
-                    <div style={{width: 24, height: 24, position: 'relative'}}>
-                        <img src={process.env.PUBLIC_URL + '/image6.png'} alt="LogoTale" style={{ width: '100%', height: '100%' }} />
-                    </div>
-                </div>
-                <div style={{padding: 8, left: 1328, top: 16, position: 'absolute', borderRadius: 20, justifyContent: 'flex-start', alignItems: 'flex-start', gap: 16, display: 'inline-flex'}}>
-                    <div style={{width: 24, height: 24, paddingLeft: 2, paddingRight: 2, paddingTop: 5, paddingBottom: 5, justifyContent: 'center', alignItems: 'center', display: 'flex'}}>
-                        <img src={process.env.PUBLIC_URL + '/mail.png'} alt="LogoTale" style={{ width: '100%', height: '100%' }} />
-                    </div>
-                </div>
-                {/*<div style={{ left: 24, top: 88, position: 'absolute', borderRadius: 10, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 1, display: 'inline-flex' }}>*/}
-                {/*    <SidebarButton label="Dashboard" icon="image3.png" active={activeButton === 'Dashboard'} onClick={() => handleButtonClick('Dashboard')} />*/}
-                {/*    <SidebarButton label="Surveys" icon="image12.png" active={activeButton === 'Surveys'} onClick={() => handleButtonClick('Surveys')} />*/}
-                {/*    <SidebarButton label="Focus group" icon="image13.png" active={activeButton === 'Focus group'} onClick={() => handleButtonClick('Focus group')} />*/}
-                {/*    <SidebarButton label="Awards" icon="image14.png" active={activeButton === 'Awards'} onClick={() => handleButtonClick('Awards')} />*/}
-                {/*</div>*/}
-                {/*<div style={{ width: 200, paddingTop: 8, paddingBottom: 8, paddingLeft: 0, left: 24, top: 677, position: 'absolute', borderRadius: 10, justifyContent: 'flex-start', alignItems: 'center', gap: 8, display: 'inline-flex' }}>*/}
-                {/*    <SidebarButton label="Assistance" icon="assistance.png" active={activeButton === 'Assistance'} onClick={() => handleButtonClick('Assistance')} />*/}
-                {/*</div>*/}
-                {/*<div style={{ width: 200, paddingTop: 8, paddingBottom: 8, paddingLeft: 0, left: 24, top: 717, position: 'absolute', borderRadius: 10, justifyContent: 'flex-start', alignItems: 'center', gap: 8, display: 'inline-flex' }}>*/}
-                {/*    <SidebarButton label="Logout" icon="logout.png" active={activeButton === 'Logout'} onClick={() => handleButtonClick('Logout')} />*/}
-                {/*</div>*/}
-
-                <div style={{width: 48, height: 48, left: 1430, top: 16, position: 'absolute', boxShadow: '0px 4px 14px rgba(0, 0, 0, 0.25)', borderRadius: 9999}}>
-                    <img src={process.env.PUBLIC_URL + '/image9.png'} alt="" style={{ position: 'absolute',width: '157%',height: '157%',left: '-14px',top: '-10px'}} />
-                </div>
-                <div style={{width: 17, height: 17, left: 1461, top: 47, position: 'absolute', background: '#151515', borderRadius: 9999, border: '1px #F2F2F2 solid'}} />
-                <div style={{width: 15, height: 15, left: 1462, top: 48, position: 'absolute'}}>
-                    <div style={{width: 6.25, height: 3.12, left: 4.38, top: 6.25, position: 'absolute', border: '1.33px white solid'}}></div>
-                </div>
+                <Header/>
+{/*                <div style={{padding: 8, left: 1376, top: 20, position: 'absolute', borderRadius: 20, justifyContent: 'flex-start', alignItems: 'flex-start', gap: 16, display: 'inline-flex'}}>*/}
+{/*                    <div style={{width: 24, height: 24, position: 'relative'}}>*/}
+{/*                        <img src={process.env.PUBLIC_URL + '/image6.png'} alt="LogoTale" style={{ width: '100%', height: '100%' }} />*/}
+{/*                    </div>*/}
+{/*                </div>*/}
+{/*                <div style={{padding: 8, left: 1328, top: 16, position: 'absolute', borderRadius: 20, justifyContent: 'flex-start', alignItems: 'flex-start', gap: 16, display: 'inline-flex'}}>*/}
+{/*                    <div style={{width: 24, height: 24, paddingLeft: 2, paddingRight: 2, paddingTop: 5, paddingBottom: 5, justifyContent: 'center', alignItems: 'center', display: 'flex'}}>*/}
+{/*                        <img src={process.env.PUBLIC_URL + '/mail.png'} alt="LogoTale" style={{ width: '100%', height: '100%' }} />*/}
+{/*                    </div>*/}
+{/*                </div>*/}
+{/*/!*-----------------*!/*/}
+{/*                <div style={{width: 48, height: 48, left: 1430, top: 16, position: 'absolute', boxShadow: '0px 4px 14px rgba(0, 0, 0, 0.25)', borderRadius: 9999}}>*/}
+{/*                    <img src={process.env.PUBLIC_URL + '/image9.png'} alt="" style={{ position: 'absolute',width: '157%',height: '157%',left: '-14px',top: '-10px'}} />*/}
+{/*                </div>*/}
+{/*                <div style={{width: 17, height: 17, left: 1461, top: 47, position: 'absolute', background: '#151515', borderRadius: 9999, border: '1px #F2F2F2 solid'}} />*/}
+{/*                <div style={{width: 15, height: 15, left: 1462, top: 48, position: 'absolute'}}>*/}
+{/*                    <div style={{width: 6.25, height: 3.12, left: 4.38, top: 6.25, position: 'absolute', border: '1.33px white solid'}}></div>*/}
+{/*                </div>*/}
+                {/*------------*/}
                 {/*<div style={{width: 48, height: 48, left: 260, top: 16, position: 'absolute', background: 'rgba(255, 255, 255, 0.70)', borderRadius: 9999}} />*/}
                 {/*<div style={{ width: 32, height: 32, left: 268, top: 24, position: 'absolute', cursor: 'pointer' }} onClick={toggleSidebar}>*/}
                 {/*    <img src={process.env.PUBLIC_URL + '/nav.png'} alt="" style={{ width: '100%', height: '100%' }} />*/}

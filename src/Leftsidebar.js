@@ -1,42 +1,47 @@
 import React, { useEffect, useState } from 'react';
-import {useNavigate, useParams} from "react-router-dom";
+import {useNavigate, useParams, useLocation } from "react-router-dom";
 import SidebarButton from "./SidebarButton";
 import SidebarButtonHide from "./SidebarButtonHide";
-import HomeFull from "./HomeFull";
+import { Link } from 'react-router-dom';
 
 const Leftsidebar = ({ sidebarVisible, toggleSidebar }) => {
     const navigate = useNavigate();
     const { iduser } = useParams();
-     // const[sidebarVisible, setSidebarVisible] = useState(true);
+    const location = useLocation(); // Utilisez useLocation pour obtenir la route actuelle
     const [activeButton, setActiveButton] = useState('Dashboard');
+
+    // Utilisez useEffect pour mettre à jour activeButton en fonction de la route actuelle
+    useEffect(() => {
+        const path = location.pathname;
+        if (path.includes('dashboard')) {
+            setActiveButton('Dashboard');
+        } else if (path.includes('surveys') ) {
+            setActiveButton('Surveys');
+        } else if (path.includes('focusgroup')) {
+            setActiveButton('Focus group');
+        } else if (path.includes('awards')) {
+            setActiveButton('Awards');
+        } else if (path.includes('Assistance')) {
+            setActiveButton('Assistance');
+        } else if (path.includes('logout')) {
+            setActiveButton('Logout');
+        } else if (path.includes('surveydetails')) {
+        setActiveButton('Surveys');}
+}, [location.pathname]);
 
     const handleButtonClick = (label) => {
         setActiveButton(label);
-        // eslint-disable-next-line react-hooks/rules-of-hooks
-        if (label === 'Assistance') {
-            console.log('iduser:', iduser);
-            // Redirection vers la route avec l'id utilisateur
-            navigate(`/assistance/${iduser}`);
-        }
-        if (label === 'Surveys') {
-            console.log('iduser:', iduser);
-            // Redirection vers la route avec l'id utilisateur
-            navigate(`/Surveys/${iduser}`);
-        }
-        // Add specific code to execute when the button is clicked
     };
-
-    //  toggleSidebar = () => {
-    //     setSidebarVisible(!sidebarVisible);
-    // };
-    const bodyLeftPosition = sidebarVisible ? 260 : 73; // Adjust the left position based on sidebar visibility
 
     return (
         <div>
-            <div style={{width: 126, height: 37, left: 24, top: 22, position: 'absolute', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
-                {/* Logo */}
-                <img src={process.env.PUBLIC_URL + '/logotale.png'} alt="LogoTale" style={{ width: '100%', height: '100%' }} />
-            </div>
+            {/* Logo redirigeant vers la page home */}
+            <Link to={`/home/${iduser}`}>
+                <div style={{ width: 126, height: 37, left: 24, top: 22, position: 'absolute', justifyContent: 'center', alignItems: 'center', display: 'inline-flex' }}>
+                    <img src={process.env.PUBLIC_URL + '/logotale.png'} alt="LogoTale" style={{ width: '100%', height: '100%' }} />
+                </div>
+            </Link>
+
             <div style={{width: 48, height: 48, left: 260, top: 16, position: 'absolute', background: 'rgba(255, 255, 255, 0.70)', borderRadius: 9999}} />
             <div style={{ width: 32, height: 32, left: 268, top: 24, position: 'absolute', cursor: 'pointer' }} onClick={toggleSidebar}>
                 <img src={process.env.PUBLIC_URL + '/nav.png'} alt="" style={{ width: '100%', height: '100%' }} />
@@ -53,40 +58,64 @@ const Leftsidebar = ({ sidebarVisible, toggleSidebar }) => {
             {sidebarVisible ? (
                 // Regular SidebarButton when sidebar is visible
                 <div style={{ left: 24, top: 88, position: 'absolute', borderRadius: 10, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 1, display: 'inline-flex' }}>
-                    <SidebarButton label="Dashboard" icon="image3.png" active={activeButton === 'Dashboard'} onClick={() => handleButtonClick('Dashboard')} />
-                    <SidebarButton label="Surveys" icon="image12.png" active={activeButton === 'Surveys'} onClick={() => handleButtonClick('Surveys')} />
+                    <Link to={`/home/${iduser}`}>
+                        <SidebarButton label="Dashboard" icon="image3.png" active={activeButton === 'Dashboard'} onClick={() => handleButtonClick('Dashboard')} />
+                    </Link>
+                    <Link to={`/surveys/${iduser}`}>
+                        <SidebarButton label="Surveys" icon="image12.png" active={activeButton === 'Surveys'} onClick={() => handleButtonClick('Surveys')} />
+                    </Link>
+                    <Link to={`/Focusgroup/${iduser}`}>
                     <SidebarButton label="Focus group" icon="image13.png" active={activeButton === 'Focus group'} onClick={() => handleButtonClick('Focus group')} />
-                    <SidebarButton label="Awards" icon="image14.png" active={activeButton === 'Awards'} onClick={() => handleButtonClick('Awards')} />
+                    </Link>
+                    <Link to={`/Awards/${iduser}`}>
+                        <SidebarButton label="Awards" icon="image14.png" active={activeButton === 'Awards'} onClick={() => handleButtonClick('Awards')} />
+                    </Link>
                 </div>
             ) : (
                 // SidebarButtonHide when sidebar is hidden
                 <div style={{ left: 24, top: 88, position: 'absolute', borderRadius: 10, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 1, display: 'inline-flex' }}>
+                    <Link to={`/home/${iduser}`}>
                     <SidebarButtonHide label="Dashboard" icon="image3.png" active={activeButton === 'Dashboard'} onClick={() => handleButtonClick('Dashboard')} />
+                    </Link>
+                    <Link to={`/surveys/${iduser}`}>
                     <SidebarButtonHide label="Surveys" icon="image12.png" active={activeButton === 'Surveys'} onClick={() => handleButtonClick('Surveys')} />
+                    </Link>
+                    <Link to={`/Focusgroup/${iduser}`}>
                     <SidebarButtonHide label="Focus group" icon="image13.png" active={activeButton === 'Focus group'} onClick={() => handleButtonClick('Focus group')} />
+                    </Link>
+                    <Link to={`/Awards/${iduser}`}>
                     <SidebarButtonHide label="Awards" icon="image14.png" active={activeButton === 'Awards'} onClick={() => handleButtonClick('Awards')} />
+                    </Link>
                 </div>            )}
 
             {sidebarVisible ? (
                 // Regular SidebarButton when sidebar is visible
                 <div style={{ width: 200, paddingTop: 8, paddingBottom: 8, paddingLeft: 0, left: 24, top: 677, position: 'absolute', borderRadius: 10, justifyContent: 'flex-start', alignItems: 'center', gap: 8, display: 'inline-flex' }}>
+                    <Link to={`/Assistance/${iduser}`}>
                     <SidebarButton label="Assistance" icon="assistance.png" active={activeButton === 'Assistance'} onClick={() => handleButtonClick('Assistance')} />
+                    </Link>
                 </div>
             ) : (
                 // SidebarButtonHide when sidebar is hidden
                 <div style={{ width: 200, paddingTop: 8, paddingBottom: 8, paddingLeft: 0, left: 24, top: 677, position: 'absolute', borderRadius: 10, justifyContent: 'flex-start', alignItems: 'center', gap: 8, display: 'inline-flex' }}>
+                    <Link to={`/Assistance/${iduser}`}>
                     <SidebarButtonHide label="Assistance" icon="assistance.png" active={activeButton === 'Assistance'} onClick={() => handleButtonClick('Assistance')} />
+                    </Link>
                 </div>
             )}
             {sidebarVisible ? (
                 // Regular SidebarButton when sidebar is visible
                 <div style={{ width: 200, paddingTop: 8, paddingBottom: 8, paddingLeft: 0, left: 24, top: 717, position: 'absolute', borderRadius: 10, justifyContent: 'flex-start', alignItems: 'center', gap: 8, display: 'inline-flex' }}>
+                    <Link to={`/Logout/${iduser}`}>
                     <SidebarButton label="Logout" icon="logout.png" active={activeButton === 'Logout'} onClick={() => handleButtonClick('Logout')} />
+                    </Link>
                 </div>
             ) : (
                 // SidebarButtonHide when sidebar is hidden
                 <div style={{ width: 200, paddingTop: 8, paddingBottom: 8, paddingLeft: 0, left: 24, top: 717, position: 'absolute', borderRadius: 10, justifyContent: 'flex-start', alignItems: 'center', gap: 8, display: 'inline-flex' }}>
-                    <SidebarButtonHide label="Logout" icon="logout.png" active={activeButton === 'Logout'} onClick={() => handleButtonClick('Logout')} />
+                    <Link to={`/Logout/${iduser}`}>
+                        <SidebarButtonHide label="Logout" icon="logout.png" active={activeButton === 'Logout'} onClick={() => handleButtonClick('Logout')} />
+                    </Link>
                 </div>
             )}
             {sidebarVisible ? (
@@ -106,13 +135,8 @@ const Leftsidebar = ({ sidebarVisible, toggleSidebar }) => {
                 <div style={{width: 50, height: 35, left: 20, top: 780, position: 'absolute', textAlign: 'center', color: '#666666', fontSize: 12, fontFamily: 'Open Sans', fontWeight: '400', wordWrap: 'break-word'}}>©2024 Tale.<br/><br/></div>
             )}
 
-            {/*/!* Pass the sidebarVisible state to the BodyComponent *!/*/}
-            {/*<div style={{ left: bodyLeftPosition, top: 16, position: 'absolute', background: 'white', borderRadius: 16, padding: 16 }}>*/}
-            {/*    <HomeFull/>*/}
-            {/*</div>*/}
-
         </div>
     );
 };
 
-export default Leftsidebar; // Make sure to export the component properly
+export default Leftsidebar;

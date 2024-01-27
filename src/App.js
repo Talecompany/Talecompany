@@ -6,6 +6,7 @@ import HomeFull from "./HomeFull";
 import HomeFulltest from "./HomeFulltest";
 import Surveys from "./Surveys";
 import Dashboard from "./Dashboard";
+import SurveyDetail from "./SurveyDetail";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                 <Route path="/home/:iduser" element={<HomeFull />} />
                 <Route path="/surveys/:iduser" element={<Surveys/>} />
                 <Route path="/assistance/:iduser" element={<Assistance />} />
+                <Route path="/surveydetails/:iduser" element={<SurveyDetail />} />
             </Routes>
         </Router>
     );

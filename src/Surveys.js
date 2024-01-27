@@ -4,6 +4,7 @@ import './App.css';
 import { useNavigate } from 'react-router-dom';
 
 import Leftsidebar from "./Leftsidebar";
+import Header from "./Header";
 
 const Survey = ({ id, top, image, logo, points, title, description, numQuestions }) => {
     const [participated, setParticipated] = useState(false);
@@ -60,6 +61,7 @@ const Surveys = () => {
     return (
         <div className="App">
             <Leftsidebar sidebarVisible={sidebarVisible} toggleSidebar={toggleSidebar} />
+            <Header/>
             <div style={{ left: 220, width: '80%', height: '100%', position: 'relative', background: '#EFEFEF', marginLeft: !sidebarVisible ? -100 : 0, transition: 'margin-left 0.3s ease' }}>
                 <div style={{ width: 1175, height: 736, left: 89, top: 80, position: 'absolute', background: 'white', borderRadius: 16 }} />
                 <div style={{ left: 105, top: 96, position: 'absolute' }}>
