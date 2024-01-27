@@ -115,13 +115,13 @@ const Assistance = () => {
             <div style={{width: '100%', height: '100%', position: 'relative', background: '#EFEFEF'}}>
 
                 <div style={{width: 220, height: 736, left: 16, top: 80, position: 'absolute', background: 'white', borderRadius: 16}} />
-                <div style={{width: 1220, height: 100, left: 260, top: 80, position: 'absolute', background: 'black', borderRadius: 16}} >
-                    <div style={{background: 'red',fontFamily: "math",fontWeight: 900,fontSize: "large"}}><p>Balance in Local Currency <br/> <br/>  {balanceInLocaleCurrency}{curr}</p> </div>
-                </div>
+                {/*<div style={{width: 1220, height: 100, left: 260, top: 80, position: 'absolute', background: 'black', borderRadius: 16}} >*/}
+                {/*    <div style={{background: 'red',fontFamily: "math",fontWeight: 900,fontSize: "large"}}><p>Balance in Local Currency <br/> <br/>  {balanceInLocaleCurrency}{curr}</p> </div>*/}
+                {/*</div>*/}
                 {/*<div style={{width: , height: 100, left: 260, top: 80, position: 'absolute', background: 'white', borderRadius: 16}} >*/}
                 {/*    /!*<div><span style={{color: '#111111', fontSize: 24, fontFamily: 'Open Sans', fontWeight: '700', lineHeight: 32, wordWrap: 'break-word'}}>Welcome, [Name]!</span><span style={{color: '#111111', fontSize: 24, fontFamily: 'Open Sans', fontWeight: '600', lineHeight: 32, wordWrap: 'break-word'}}> <br/></span><span style={{color: '#333333', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '400', lineHeight: 32, wordWrap: 'break-word'>Explore influential opportunities by participating in exciting surveys. Your opinion matters!</span></div>*!/*/}
                 {/*</div>*/}
-                <div style={{width: 1220, height: 600, left: 260, top: 215, position: 'absolute', background: 'white', borderRadius: 16}} >
+                <div style={{width: 1220, height: 736, left: 260, top: 80, position: 'absolute', background: 'white', borderRadius: 16}} >
                     {/* Intégrez le formulaire de contact ici */}
                     <ContactForm />
                 </div>

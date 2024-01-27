@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ReactQuill from 'react-quill';  // Importez le composant de l'éditeur de texte enrichi
 import 'react-quill/dist/quill.snow.css';  // Importez les styles de l'éditeur de texte enrichi
+import countryCallingCode from 'country-calling-code'; // Importer le module pour les codes de pays
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -28,14 +29,12 @@ const ContactForm = () => {
     };
 
     // Fonction pour obtenir le préfixe du numéro en fonction du pays
+// Fonction pour obtenir le préfixe du numéro en fonction du pays
     const getPrefixByCountry = (countryCode) => {
-        // Vous pouvez utiliser une bibliothèque comme 'country-currency-map' pour obtenir le préfixe du pays
-        // Assurez-vous d'installer la bibliothèque si vous choisissez de l'utiliser.
-        // Exemple hypothétique :
-        // const countryData = countryCurrencyMap.getCountryByAlpha2(countryCode);
-        // return countryData ? countryData.phone : ''; // Retourne le préfixe du pays ou une chaîne vide
-        return '';  // Placeholder - à remplacer avec une logique réelle
+        const countryData = countryCallingCode.find((data) => data.alpha2 === countryCode);
+        return countryData ? `+${countryData.callingCode}` : ''; // Ajouter le préfixe
     };
+
 
     return (
         <form onSubmit={handleSubmit} style={{ padding: 20 }}>
@@ -71,7 +70,7 @@ const ContactForm = () => {
                         <div style={{left: 0, top: -2, position: 'absolute', color: 'black', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '600', wordWrap: 'break-word'}}>Number</div>
                         <input type="tel" name="numero" value={formData.numero} onChange={handleInputChange} style={{ border: 0, width: 400, height: 51, left: 0, top: 25, position: 'absolute', background: 'rgba(17, 17, 17, 0.10)', borderRadius: 10 }} />
                         <div style={{left: 16, top: 41, position: 'absolute', color: 'rgba(0, 0, 0, 0.40)', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '400', wordWrap: 'break-word'}}>Enter your Number</div>
-                        <span>{getPrefixByCountry('FR')} {/* Remplacez 'FR' par le code du pays sélectionné */}</span>
+                        <span>{getPrefixByCountry('FR')}</span>
                     </label>
                 </div>
             </div>
