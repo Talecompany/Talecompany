@@ -43,6 +43,12 @@ const Datasecurity = () => {
     const [sidebarVisible, setSidebarVisible] = useState(true);
 
     const handleAccept = () => {
+        const termsCheckbox = document.getElementById('termsCheckbox');
+
+        if (termsCheckbox && !termsCheckbox.checked) {
+            alert("You must agree to the terms and conditions before proceeding.");
+            return;
+        }
         // Logic when the user accepts
         // For example, save the acceptance status to local storage
         localStorage.setItem('moralContractAccepted', 'true');
