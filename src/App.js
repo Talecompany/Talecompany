@@ -7,6 +7,7 @@ import HomeFulltest from "./HomeFulltest";
 import Surveys from "./Surveys";
 import Dashboard from "./Dashboard";
 import SurveyDetail from "./SurveyDetail";
+import Datasecurity from "./Datasecurity";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                 <Route path="/surveys/:iduser" element={<Surveys/>} />
                 <Route path="/assistance/:iduser" element={<Assistance />} />
                 <Route path="/surveydetails/:iduser" element={<SurveyDetail />} />
+                <Route path="/dataverification/:iduser" element={<Datasecurity />} />
             </Routes>
         </Router>
     );
