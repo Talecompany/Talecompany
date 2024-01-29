@@ -12,14 +12,14 @@ const Container = ({ children }) => (
 
 const InfoBox = ({ points, color }) => (
     <div style={{ borderRadius: 30, justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex', ...color }}>
-        <div style={{ textAlign: 'right', color: 'white', fontSize: 10, fontFamily: 'Open Sans', fontWeight: '600', wordWrap: 'break-word' }}>{points} points</div>
+        <div style={{ textAlign: 'right', color: 'white', fontSize: 10, fontFamily: 'revert', fontWeight: '600', wordWrap: 'break-word' }}>{points} points</div>
     </div>
 );
 
 const TextStyle = {
     color: '#333333',
     fontSize: 14,
-    fontFamily: 'Open Sans',
+    fontFamily: 'revert',
     wordWrap: 'break-word',
 };
 
@@ -65,10 +65,10 @@ const SurveyDetail = () => {
 
             {/* Logo and Company name */}
             <img style={{ width: 48, height: 48, left: 222, top: 318, position: 'absolute', borderRadius: 9999, border: '2px white solid' }} src={process.env.PUBLIC_URL + '/surv2logo.png'} />
-            <div style={{ width: 172, height: 46, left: 278, top: 340, position: 'absolute', color: 'white', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>Tunisie Telecom</div>
+            <div style={{ width: 172, height: 46, left: 278, top: 340, position: 'absolute', color: 'white', fontSize: 14, fontFamily: 'revert', fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>Tunisie Telecom</div>
 
             {/* Title */}
-            <div style={{ width: 993, left: 254, top: 102, position: 'absolute', color: '#111111', fontSize: 24, fontFamily: 'Open Sans', fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>[customer] satisfaction survey</div>
+            <div style={{ width: 993, left: 254, top: 102, position: 'absolute', color: '#111111', fontSize: 24, fontFamily: 'revert', fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>[customer] satisfaction survey</div>
 
                 {/* Back button */}
                 <button onClick={handleBackClick} style={{ width: 30, height: 30, padding: 0, left: 216, top: 100, position: 'absolute', justifyContent: 'center', alignItems: 'center', display: 'inline-flex', background: 'transparent', border: 0 }}>
@@ -80,15 +80,15 @@ const SurveyDetail = () => {
 
                 {/* Introduction */}
             <div style={{ width: 1100, left: 217, top: 445, position: 'absolute' }}>
-                <span style={{ color: 'black', fontSize: 16, fontFamily: 'Open Sans', fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>Introduction<br /></span>
-                <span style={{ color: 'black', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '400', lineHeight: 1, wordWrap: 'break-word' }}>
+                <span style={{ color: 'black', fontSize: 16, fontFamily: 'revert', fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>Introduction<br /></span>
+                <span style={{ color: 'black', fontSize: 14, fontFamily: 'revert', fontWeight: '400', lineHeight: 1, wordWrap: 'break-word' }}>
           It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout...
         </span>
             </div>
 
             {/* Start button */}
             <div style={{ width: 147, padding: 16, left: 1101, top: 749, position: 'absolute', background: gradientColor, borderRadius: 10, justifyContent: 'center', alignItems: 'center', display: 'inline-flex' }}>
-                <div style={{ color: 'white', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '600', wordWrap: 'break-word' }}>Start</div>
+                <div style={{ color: 'white', fontSize: 14, fontFamily: 'revert', fontWeight: '600', wordWrap: 'break-word' }}>Start</div>
             </div>
             </div>
         </Container>

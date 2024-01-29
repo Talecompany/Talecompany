@@ -25,7 +25,7 @@ const activeButtonStyle = {
 
 const textStyle = {
     fontSize: 14,
-    fontFamily: 'Open Sans',
+    fontFamily: 'revert',
     fontWeight: '600',
     wordWrap: 'break-word',
 };
@@ -34,7 +34,7 @@ const textStyle = {
 const NotificationBar = () => {
     // Logique pour afficher la barre de notifications
     return (
-        <div style={{ width: 200, position: 'absolute', top: '60px', right: 90, boxShadow: '0px 4px 14px rgba(0, 0, 0, 0.25)', background: 'white', padding: '0px', borderRadius: '8px', zIndex: 1 }}>
+        <div style={{ width: 200, position: 'absolute', top: '60px', left: 1240, boxShadow: '0px 4px 14px rgba(0, 0, 0, 0.25)', background: 'white', padding: '0px', borderRadius: '8px', zIndex: 1 }}>
             {/* Contenu de la barre de notifications */}
             <p style={{ ...textStyle, background: 'linear-gradient(90deg, #00BDA9 0%, #00C0FC 100%)', color: 'white', padding: '6px' }}>Notifications</p>
             <hr style={{ height: '1px', border: 'none', color: '#ccc', backgroundColor: '#ccc', margin: '4px 0' }} />
@@ -59,7 +59,7 @@ const NotificationBar = () => {
 const UserMenu = ({ activeButton, setActiveButton }) => {
     // Logique pour afficher le menu utilisateur
     return (
-        <div style={{ width: 120, position: 'absolute', top: '60px', right: 10, boxShadow: '0px 4px 14px rgba(0, 0, 0, 0.25)', background: 'white', padding: '4px', borderRadius: '8px', zIndex:1}}>
+        <div style={{ width: 120, position: 'absolute', top: '60px', left: 1380, boxShadow: '0px 4px 14px rgba(0, 0, 0, 0.25)', background: 'white', padding: '4px', borderRadius: '8px', zIndex:1}}>
             {/* Options du menu utilisateur */}
             <button
                 style={{ ...buttonStyle, ...(activeButton === 'Profil' && activeButtonStyle) }}

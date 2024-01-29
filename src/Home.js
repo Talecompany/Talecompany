@@ -130,7 +130,7 @@ const Home = () => {
                     <div style={{background: 'white',fontFamily: "math",fontWeight: 900,fontSize: "large"}}><p style={{color: 'gold'}}>Balance in Local Currency {balanceInLocaleCurrency} {curr}</p> </div>
                 </div>
                 <div style={{width: 1220, height: 100, left: 260, top: 80, position: 'absolute', background: 'white', borderRadius: 16}} >
-                    <div><span style={{color: '#111111', fontSize: 24, fontFamily: 'Open Sans', fontWeight: '700', lineHeight: 2, wordWrap: 'break-word'}}>Welcome, [Name]!</span><span style={{color: '#111111', fontSize: 24, fontFamily: 'Open Sans', fontWeight: '600', lineHeight: 2, wordWrap: 'break-word'}}> <br/></span><span style={{color: '#333333', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '400', lineHeight: 3, wordWrap: 'break-word'}}>Explore influential opportunities by participating in exciting surveys. Your opinion matters!</span></div>
+                    <div><span style={{color: '#111111', fontSize: 24, fontFamily: 'revert', fontWeight: '700', lineHeight: 2, wordWrap: 'break-word'}}>Welcome, [Name]!</span><span style={{color: '#111111', fontSize: 24, fontFamily: 'revert', fontWeight: '600', lineHeight: 2, wordWrap: 'break-word'}}> <br/></span><span style={{color: '#333333', fontSize: 14, fontFamily: 'revert', fontWeight: '400', lineHeight: 3, wordWrap: 'break-word'}}>Explore influential opportunities by participating in exciting surveys. Your opinion matters!</span></div>
                 </div>
                 <div style={{width: 580, height: 280, left: 260, top: 312, position: 'absolute', background: 'white', borderRadius: 16}} />
                 <div style={{width: 1220, height: 557, left: 260, top: 608, position: 'absolute', background: 'white', borderRadius: 16}} />
@@ -174,31 +174,31 @@ const Home = () => {
                     <img src={process.env.PUBLIC_URL + '/nav.png'} alt="" style={{ width: '100%', height: '100%' }} />
                 </div>
                 <div style={{width: 390, height: 100, left: 260, top: 196, position: 'absolute', background: '#FFAA1A', borderRadius: 16}} />
-                <div style={{left: 590, top: 220, position: 'absolute', textAlign: 'right', color: 'white', fontSize: 32, fontFamily: 'Open Sans', fontWeight: '700', lineHeight: 0, wordWrap: 'break-word'}}>0</div>
-                <div style={{left: 560, top: 250, position: 'absolute', textAlign: 'right', color: 'white', fontSize: 16, fontFamily: 'Open Sans', fontWeight: '600', lineHeight: 0, wordWrap: 'break-word'}}>Points</div>
+                <div style={{left: 590, top: 220, position: 'absolute', textAlign: 'right', color: 'white', fontSize: 32, fontFamily: 'revert', fontWeight: '700', lineHeight: 0, wordWrap: 'break-word'}}>0</div>
+                <div style={{left: 560, top: 250, position: 'absolute', textAlign: 'right', color: 'white', fontSize: 16, fontFamily: 'revert', fontWeight: '600', lineHeight: 0, wordWrap: 'break-word'}}>Points</div>
                 <div style={{width: 68, height: 68, left: 277, top: 212, position: 'absolute', opacity: 0.15, background: 'white', borderRadius: 9999}} />
                 <div style={{width: 42, height: 42, paddingTop: 4.51, paddingBottom: 4.71, paddingLeft: 5.25, paddingRight: 5.25, left: 285, top: 223, position: 'absolute', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
                     <img src={process.env.PUBLIC_URL + '/image8.png'} alt="LogoTale" style={{ width: '100%', height: '100%' }} />
                 </div>
                 <div style={{width: 390, height: 100, left: 675, top: 196, position: 'absolute', background: '#FF720D', borderRadius: 16}} />
-                <div style={{width: 172, left: 850, top: 250, position: 'absolute', textAlign: 'right', color: 'white', fontSize: 16, fontFamily: 'Open Sans', fontWeight: '600', lineHeight: 0, wordWrap: 'break-word'}}>Open surveys</div>
-                <div style={{left: 1008, top: 220, position: 'absolute', textAlign: 'right', color: 'white', fontSize: 32, fontFamily: 'Open Sans', fontWeight: '700', lineHeight: 0, wordWrap: 'break-word'}}>0</div>
+                <div style={{width: 172, left: 850, top: 250, position: 'absolute', textAlign: 'right', color: 'white', fontSize: 16, fontFamily: 'revert', fontWeight: '600', lineHeight: 0, wordWrap: 'break-word'}}>Open surveys</div>
+                <div style={{left: 1008, top: 220, position: 'absolute', textAlign: 'right', color: 'white', fontSize: 32, fontFamily: 'revert', fontWeight: '700', lineHeight: 0, wordWrap: 'break-word'}}>0</div>
                 <div style={{width: 68, height: 68, left: 690, top: 212, position: 'absolute', opacity: 0.15, background: 'white', borderRadius: 9999}} />
                 <div style={{width: 42, height: 42, left: 703, top: 225, position: 'absolute'}}>
                     <img src={process.env.PUBLIC_URL + '/image10.png'} alt="LogoTale" style={{ width: '100%', height: '100%' }} />
                 </div>
                 <div style={{width: 390, height: 100, left: 1090, top: 196, position: 'absolute', background: '#00BFED', borderRadius: 16}} />
-                <div style={{width: 225, left: 1200, top: 250, position: 'absolute', textAlign: 'right', color: 'white', fontSize: 16, fontFamily: 'Open Sans', fontWeight: '600', lineHeight: 0, wordWrap: 'break-word'}}>Upcoming live sessions</div>
-                <div style={{width: 19, left: 1400, top: 220, position: 'absolute', textAlign: 'right', color: 'white', fontSize: 32, fontFamily: 'Open Sans', fontWeight: '700', lineHeight: 0, wordWrap: 'break-word'}}>0</div>
+                <div style={{width: 225, left: 1200, top: 250, position: 'absolute', textAlign: 'right', color: 'white', fontSize: 16, fontFamily: 'revert', fontWeight: '600', lineHeight: 0, wordWrap: 'break-word'}}>Upcoming live sessions</div>
+                <div style={{width: 19, left: 1400, top: 220, position: 'absolute', textAlign: 'right', color: 'white', fontSize: 32, fontFamily: 'revert', fontWeight: '700', lineHeight: 0, wordWrap: 'break-word'}}>0</div>
                 <div style={{width: 68, height: 68, left: 1105, top: 212, position: 'absolute', opacity: 0.15, background: 'white', borderRadius: 9999}} />
                 <div style={{width: 42, height: 42, paddingLeft: 3.94, paddingRight: 3.94, paddingTop: 4.96, paddingBottom: 4.96, left: 1116, top: 223, position: 'absolute', justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
                     <img src={process.env.PUBLIC_URL + '/image7.png'} alt="LogoTale" style={{ width: '100%', height: '100%' }} />
                 </div>
-                <div style={{left: 276, top: 328, position: 'absolute', color: '#00BDA9', fontSize: 20, fontFamily: 'Open Sans', fontWeight: '700', wordWrap: 'break-word'}}>Surveys</div>
-                <div style={{left: 290, top: 624, position: 'absolute', color: '#F9BC33', fontSize: 20, fontFamily: 'Open Sans', fontWeight: '700', wordWrap: 'break-word'}}>Quick Survey</div>
-                <div style={{left: 915, top: 328, position: 'absolute', color: '#00BDA9', fontSize: 20, fontFamily: 'Open Sans', fontWeight: '700', wordWrap: 'break-word'}}>Focus group</div>
-                <div style={{left: 450, top: 492, position: 'absolute', color: '#333333', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '400', wordWrap: 'break-word'}}>There are no surveys at this time</div>
-                <div style={{left: 1060, top: 492, position: 'absolute', textAlign: 'center', color: '#333333', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '400', wordWrap: 'break-word'}}>There are no live shows for you at the moment</div>
+                <div style={{left: 276, top: 328, position: 'absolute', color: '#00BDA9', fontSize: 20, fontFamily: 'revert', fontWeight: '700', wordWrap: 'break-word'}}>Surveys</div>
+                <div style={{left: 290, top: 624, position: 'absolute', color: '#F9BC33', fontSize: 20, fontFamily: 'revert', fontWeight: '700', wordWrap: 'break-word'}}>Quick Survey</div>
+                <div style={{left: 915, top: 328, position: 'absolute', color: '#00BDA9', fontSize: 20, fontFamily: 'revert', fontWeight: '700', wordWrap: 'break-word'}}>Focus group</div>
+                <div style={{left: 450, top: 492, position: 'absolute', color: '#333333', fontSize: 14, fontFamily: 'revert', fontWeight: '400', wordWrap: 'break-word'}}>There are no surveys at this time</div>
+                <div style={{left: 1060, top: 492, position: 'absolute', textAlign: 'center', color: '#333333', fontSize: 14, fontFamily: 'revert', fontWeight: '400', wordWrap: 'break-word'}}>There are no live shows for you at the moment</div>
                 <div style={{width: 55.06, height: 59, left: 520, top: 407, position: 'absolute'}}>
                     <img src={process.env.PUBLIC_URL + '/ss.png'} alt="LogoTale" style={{ width: '100%', height: '100%' }} />
                 </div>
@@ -207,22 +207,22 @@ const Home = () => {
                 </div>
                 {/*///houni eli f note*/}
                 <div style={{paddingLeft: 8, paddingRight: 8, paddingTop: 4, paddingBottom: 4, left: 350, top: 331, position: 'absolute', background: '#666666', borderRadius: 30, flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
-                    <div style={{textAlign: 'center', color: 'white', fontSize: 10, fontFamily: 'Open Sans', fontWeight: '700', wordWrap: 'break-word'}}>0</div>
+                    <div style={{textAlign: 'center', color: 'white', fontSize: 10, fontFamily: 'revert', fontWeight: '700', wordWrap: 'break-word'}}>0</div>
                 </div>
                 <div style={{paddingLeft: 8, paddingRight: 8, paddingTop: 4, paddingBottom: 4, left: 1025, top: 331, position: 'absolute', background: '#666666', borderRadius: 30, flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: 10, display: 'inline-flex'}}>
-                    <div style={{textAlign: 'center', color: 'white', fontSize: 10, fontFamily: 'Open Sans', fontWeight: '700', wordWrap: 'break-word'}}>0</div>
+                    <div style={{textAlign: 'center', color: 'white', fontSize: 10, fontFamily: 'revert', fontWeight: '700', wordWrap: 'break-word'}}>0</div>
                 </div>
-                <div style={{left: 740, top: 328, position: 'absolute', textAlign: 'center', color: '#111111', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '600', wordWrap: 'break-word'}}>View all</div>
-                <div style={{left: 1380, top: 328, position: 'absolute', textAlign: 'center', color: '#111111', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '600', wordWrap: 'break-word'}}>View all</div>
+                <div style={{left: 740, top: 328, position: 'absolute', textAlign: 'center', color: '#111111', fontSize: 14, fontFamily: 'revert', fontWeight: '600', wordWrap: 'break-word'}}>View all</div>
+                <div style={{left: 1380, top: 328, position: 'absolute', textAlign: 'center', color: '#111111', fontSize: 14, fontFamily: 'revert', fontWeight: '600', wordWrap: 'break-word'}}>View all</div>
                 <div style={{width: 16, height: 16, left: 795, top: 326, position: 'absolute'}}>
                     <img src={process.env.PUBLIC_URL + '/image11.png'} alt="" style={{ width: '100%', height: '100%' }} />
                 </div>
                 <div style={{width: 16, height: 16, left: 1435, top: 326, position: 'absolute'}}>
                     <img src={process.env.PUBLIC_URL + '/image11.png'} alt="" style={{ width: '100%', height: '100%' }} />
                 </div>
-                <div style={{width: 815, left: 127, top: 659, position: 'absolute', color: '#333333', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '400', wordWrap: 'break-word'}}>Discover surveys tailored to your interests. Participate and earn extra points. Start now!</div>
+                <div style={{width: 815, left: 127, top: 659, position: 'absolute', color: '#333333', fontSize: 14, fontFamily: 'revert', fontWeight: '400', wordWrap: 'break-word'}}>Discover surveys tailored to your interests. Participate and earn extra points. Start now!</div>
                 <div style={{width: 218, height: 0, left: 236, top: 770, position: 'absolute', transform: 'rotate(-180deg)', transformOrigin: '0 0', border: '1px #DDDDDD solid'}}></div>
-                <div style={{width: 175, height: 35, left: 40, top: 790, position: 'absolute', textAlign: 'center', color: '#666666', fontSize: 12, fontFamily: 'Open Sans', fontWeight: '400', wordWrap: 'break-word'}}>©2024 Tale. All rights reserved.<br/><br/></div>
+                <div style={{width: 175, height: 35, left: 40, top: 790, position: 'absolute', textAlign: 'center', color: '#666666', fontSize: 12, fontFamily: 'revert', fontWeight: '400', wordWrap: 'break-word'}}>©2024 Tale. All rights reserved.<br/><br/></div>
                 <div style={{left: 214}}>< QuickSurveyEmpty/></div>
             </div>
         </div>

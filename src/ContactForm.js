@@ -4,8 +4,10 @@ import 'react-quill/dist/quill.snow.css';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import countryCallingCode from 'country-calling-code';
+import {useParams} from "react-router-dom";
 
 const ContactForm = () => {
+    const { iduser } = useParams();
     const [formData, setFormData] = useState({
         nom: '',
         prenom: '',
@@ -92,27 +94,33 @@ const ContactForm = () => {
         value: data.alpha2,
         label: getLabelForCountry(data),
     }));
+    const handleDecline = () => {
+        // Logic when the user declines
+        // For example, you might redirect the user to a different page
+        window.location.href =`/home/${iduser}`;
+        // Alternatively, you could display a message or take other actions.
+    };
 
     return (
         <form onSubmit={handleSubmit} style={{ padding: 20 }}>
-            <div style={{ left: 90, top: 20, position: 'absolute', color: 'black', fontSize: 30, fontFamily: 'revert', fontWeight: '900', wordWrap: 'break-word' }}>Assistance Form</div>
+            <div style={{ left: 90, top: 20, position: 'absolute', color: 'black', fontSize: 24, fontFamily: 'revert', fontWeight: '700', wordWrap: 'break-word' }}>Assistance Form</div>
 
             <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginTop: 80 }}>
                 {/* First Name */}
                 <div style={{ flex: 1, marginRight: 10, width: '100%', height: '100%', position: 'relative'}}>
                     <label>
-                        <div style={{left: 70, top: -2, position: 'absolute', color: 'black', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '600', wordWrap: 'break-word'}}>First Name</div>
+                        <div style={{left: 70, top: -2, position: 'absolute', color: 'black', fontSize: 14, fontFamily: 'revert', fontWeight: '600', wordWrap: 'break-word'}}>First Name</div>
                         <input type="text" name="nom" value={formData.nom} onChange={handleInputChange} style={{ border: 0, width: 400, height: 31, left: 70, top: 25, position: 'absolute', background: 'rgba(17, 17, 17, 0.10)', borderRadius: 10, padding: '10px' }} />
-                        <div style={{left: 86, top: 41, position: 'absolute', color: 'rgba(0, 0, 0, 0.40)', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '400', wordWrap: 'break-word'}}>{formData.nom === '' && predefinedMessages.nom}</div>
+                        <div style={{left: 86, top: 41, position: 'absolute', color: 'rgba(0, 0, 0, 0.40)', fontSize: 14, fontFamily: 'revert', fontWeight: '400', wordWrap: 'break-word'}}>{formData.nom === '' && predefinedMessages.nom}</div>
                     </label>
                 </div>
 
                 {/* Last Name */}
                 <div style={{ flex: 1, marginRight: 10, width: '100%', height: '100%', position: 'relative'}}>
                     <label>
-                        <div style={{left: 0, top: -2, position: 'absolute', color: 'black', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '600', wordWrap: 'break-word'}}>Last Name</div>
+                        <div style={{left: 0, top: -2, position: 'absolute', color: 'black', fontSize: 14, fontFamily: 'revert', fontWeight: '600', wordWrap: 'break-word'}}>Last Name</div>
                         <input type="text" name="prenom" value={formData.prenom} onChange={handleInputChange} style={{ border: 0, width: 400, height: 31, left: 0, top: 25, position: 'absolute', background: 'rgba(17, 17, 17, 0.10)', borderRadius: 10,padding: '10px' }} />
-                        <div style={{left: 16, top: 41, position: 'absolute', color: 'rgba(0, 0, 0, 0.40)', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '400', wordWrap: 'break-word'}}>{formData.prenom === '' && predefinedMessages.prenom}</div>
+                        <div style={{left: 16, top: 41, position: 'absolute', color: 'rgba(0, 0, 0, 0.40)', fontSize: 14, fontFamily: 'revert', fontWeight: '400', wordWrap: 'break-word'}}>{formData.prenom === '' && predefinedMessages.prenom}</div>
                     </label>
                 </div>
             </div>
@@ -121,23 +129,23 @@ const ContactForm = () => {
                 {/* Email Address */}
                 <div style={{ flex: 1, marginRight: 10, width: '100%', height: '100%', position: 'relative' }}>
                     <label>
-                        <div style={{ left: 70, top: -2, position: 'absolute', color: 'black', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '600', wordWrap: 'break-word' }}>Email Address</div>
+                        <div style={{ left: 70, top: -2, position: 'absolute', color: 'black', fontSize: 14, fontFamily: 'revert', fontWeight: '600', wordWrap: 'break-word' }}>Email Address</div>
                         <input type="email" name="email" value={formData.email} onChange={handleInputChange} style={{ border: 0, width: 400, height: 31, left: 70, top: 25, position: 'absolute', background: 'rgba(17, 17, 17, 0.10)', borderRadius: 10, padding: '10px' }} />
-                        <div style={{left: 86, top: 41, position: 'absolute', color: 'rgba(0, 0, 0, 0.40)', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '400', wordWrap: 'break-word'}}>{formData.email === '' && predefinedMessages.email}</div>
+                        <div style={{left: 86, top: 41, position: 'absolute', color: 'rgba(0, 0, 0, 0.40)', fontSize: 14, fontFamily: 'revert', fontWeight: '400', wordWrap: 'break-word'}}>{formData.email === '' && predefinedMessages.email}</div>
                     </label>
                 </div>
 
                 {/* Number */}
                 <div style={{ flex: 1, marginRight: 10, width: '100%', height: '100%', position: 'relative' }}>
                     <label>
-                        <div style={{ left: 0, top: -2, position: 'absolute', color: 'black', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '600', wordWrap: 'break-word' }}>Number</div>
+                        <div style={{ left: 0, top: -2, position: 'absolute', color: 'black', fontSize: 14, fontFamily: 'revert', fontWeight: '600', wordWrap: 'break-word' }}>Number</div>
                         <PhoneInput style={{position: 'relative', top:25, height:50}}
                             country={'fr'}
                             value={formData.numero}
                             onChange={(value, data) => handleCountryChange(value, data)}
                             inputStyle={{ position:"relative",top:0, right:70,height:50, border: 0, width: 385, marginLeft: 10, background: 'rgba(17, 17, 17, 0.10)', borderRadius: 10, padding: '10px' }}
                         />
-                        {/*<div style={{ left: 16, top: 41, position: 'absolute', color: 'rgba(0, 0, 0, 0.40)', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '400', wordWrap: 'break-word' }}>{predefinedMessages.numero}</div>*/}
+                        {/*<div style={{ left: 16, top: 41, position: 'absolute', color: 'rgba(0, 0, 0, 0.40)', fontSize: 14, fontFamily: 'revert', fontWeight: '400', wordWrap: 'break-word' }}>{predefinedMessages.numero}</div>*/}
                     </label>
                 </div>
             </div>
@@ -146,7 +154,7 @@ const ContactForm = () => {
                 {/* Sujet */}
                 <div style={{ flex: 1, marginRight: 10, width: '100%', height: '100%', position: 'relative'}}>
                     <label>
-                        <div style={{left: 70, top: -2, position: 'absolute', color: 'black', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '600', wordWrap: 'break-word'}}>Sujet</div>
+                        <div style={{left: 70, top: -2, position: 'absolute', color: 'black', fontSize: 14, fontFamily: 'revert', fontWeight: '600', wordWrap: 'break-word'}}>Sujet</div>
                         <select name="sujet" value={formData.sujet} onChange={handleInputChange} style={{ border: 0, width: 420, height: 51, left: 70, top: 25, position: 'absolute', background: 'rgba(17, 17, 17, 0.10)', borderRadius: 10, padding: '10px'  }}>
                             <option value="Deal">Deal</option>
                             <option value="interesting insights">Interesting Insights</option>
@@ -159,7 +167,7 @@ const ContactForm = () => {
                 {/* Description */}
                 <div style={{ flex: 1, marginRight: 10, width: '100%', height: '100%', position: 'relative'}}>
                     <label style={{ marginTop: 10 }}>
-                        <div style={{left: 0, top: -2, position: 'absolute', color: 'black', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '600', wordWrap: 'break-word'}}>Description</div>
+                        <div style={{left: 0, top: -2, position: 'absolute', color: 'black', fontSize: 14, fontFamily: 'revert', fontWeight: '600', wordWrap: 'break-word'}}>Description</div>
                         <ReactQuill value={formData.description} onChange={(value) => setFormData((prevData) => ({ ...prevData, description: value }))} style={{border: 0, width: 400, height: 60, left: 0, top: 25, position: 'absolute', background: 'transparent', borderRadius: 0}}/>
                     </label>
                 </div>
@@ -169,9 +177,13 @@ const ContactForm = () => {
             {errorMessage && <div style={{ position:"relative",color: 'red', marginTop: 10, top:150 }}>{errorMessage}</div>}
 
             <div style={{ marginTop: 170 }}>
-                <button type="submit" style={{ width: '30%', height: '100%', justifyContent: 'center', alignItems: 'center', display: 'inline-flex', cursor: 'pointer', background: 'linear-gradient(90deg, #00BDA9 0%, #00C0FC 100%)', color: 'white', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '600', wordWrap: 'break-word', border: 'none', padding: '10px 20px', borderRadius: 16, outline: 'none', transition: 'background-color 0.3s' }}>
+                <button type="submit" style={{ marginRight:20,width: '20%', height: '100%', justifyContent: 'center', alignItems: 'center', display: 'inline-flex', cursor: 'pointer', background: 'linear-gradient(90deg, #00BDA9 0%, #00C0FC 100%)', color: 'white', fontSize: 14, fontFamily: 'revert', fontWeight: '600', wordWrap: 'break-word', border: 'none', padding: '10px 20px', borderRadius: 10, outline: 'none', transition: 'background-color 0.3s' }}>
                     Send
                 </button>
+                <button onClick={handleDecline} style={{ width: '20%', height: '100%', justifyContent: 'center', alignItems: 'center', display: 'inline-flex', cursor: 'pointer', background: 'linear-gradient(90deg, red 0%, #850606 100%)', color: 'white', fontSize: 14, fontFamily: 'revert', fontWeight: '600', wordWrap: 'break-word', border: 'none', padding: '10px 20px', borderRadius: 10, outline: 'none', transition: 'background-color 0.3s' }}>
+                    Cancel
+                </button>
+
             </div>
         </form>
     );

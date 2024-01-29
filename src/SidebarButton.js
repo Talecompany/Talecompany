@@ -19,8 +19,14 @@ const SidebarButton = ({ label, icon, active, onClick }) => {
         <div style={buttonStyle} onClick={onClick}>
             <div style={{ width: 24, height: 24, position: 'relative' }}>
                 <img src={process.env.PUBLIC_URL + `/${icon}`} alt={label} style={{ width: '100%', height: '100%' }} />
+                {/*{active ? (*/}
+                {/*    <img src={process.env.PUBLIC_URL + `/${icon1}`} alt={label} style={{ width: '100%', height: '100%' }} />*/}
+                {/*) : (*/}
+                {/*    <img src={process.env.PUBLIC_URL + `/${icon}`} alt={label} style={{ width: '100%', height: '100%' }} />*/}
+                {/*)}*/}
+
             </div>
-            <div style={{ fontSize: 14, fontFamily: 'Open Sans', fontWeight: '600', wordWrap: 'break-word' }}>
+            <div style={{ fontSize: 14, fontFamily: 'revert', fontWeight: '600', wordWrap: 'break-word' }}>
                 {label}
             </div>
         </div>

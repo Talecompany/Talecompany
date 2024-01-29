@@ -9,6 +9,8 @@ const Leftsidebar = ({ sidebarVisible, toggleSidebar }) => {
     const { iduser } = useParams();
     const location = useLocation(); // Utilisez useLocation pour obtenir la route actuelle
     const [activeButton, setActiveButton] = useState('Dashboard');
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
 
     // Utilisez useEffect pour mettre à jour activeButton en fonction de la route actuelle
     useEffect(() => {
@@ -59,7 +61,7 @@ const Leftsidebar = ({ sidebarVisible, toggleSidebar }) => {
                 // Regular SidebarButton when sidebar is visible
                 <div style={{ left: 24, top: 88, position: 'absolute', borderRadius: 10, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 1, display: 'inline-flex' }}>
                     <Link to={`/home/${iduser}`}>
-                        <SidebarButton label="Dashboard" icon="image3.png" active={activeButton === 'Dashboard'} onClick={() => handleButtonClick('Dashboard')} />
+                        <SidebarButton label="Dashboard" icon1="ic.png" icon="image3.png" active={activeButton === 'Dashboard'} onClick={() => handleButtonClick('Dashboard')} />
                     </Link>
                     <Link to={`/surveys/${iduser}`}>
                         <SidebarButton label="Surveys" icon="image12.png" active={activeButton === 'Surveys'} onClick={() => handleButtonClick('Surveys')} />
@@ -129,10 +131,10 @@ const Leftsidebar = ({ sidebarVisible, toggleSidebar }) => {
             )}
             {sidebarVisible ? (
                 // Regular SidebarButton when sidebar is visible
-                <div style={{width: 175, height: 35, left: 40, top: 790, position: 'absolute', textAlign: 'center', color: '#666666', fontSize: 12, fontFamily: 'Open Sans', fontWeight: '400', wordWrap: 'break-word'}}>©2024 Tale. All rights reserved.<br/><br/></div>
+                <div style={{width: 175, height: 35, left: 40, top: 790, position: 'absolute', textAlign: 'center', color: '#666666', fontSize: 12, fontFamily: 'revert', fontWeight: '400', wordWrap: 'break-word'}}>©{currentYear} Tale. All rights reserved.<br/><br/></div>
             ) : (
                 // SidebarButtonHide when sidebar is hidden
-                <div style={{width: 50, height: 35, left: 20, top: 780, position: 'absolute', textAlign: 'center', color: '#666666', fontSize: 12, fontFamily: 'Open Sans', fontWeight: '400', wordWrap: 'break-word'}}>©2024 Tale.<br/><br/></div>
+                <div style={{width: 50, height: 35, left: 20, top: 780, position: 'absolute', textAlign: 'center', color: '#666666', fontSize: 12, fontFamily: 'revert', fontWeight: '400', wordWrap: 'break-word'}}>©{currentYear} Tale.<br/><br/></div>
             )}
 
         </div>
