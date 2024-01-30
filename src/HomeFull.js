@@ -251,7 +251,7 @@ const Home = () => {
                     <img src={process.env.PUBLIC_URL + '/image11.png'} alt="" style={{ width: '100%', height: '100%' }} />
                 </div>
                 </Link>
-                <div style={{width: 815, left: 127, top: 659, position: 'absolute', color: '#333333', fontSize: 14, fontFamily: 'revert', fontWeight: '400', wordWrap: 'break-word'}}>Discover surveys tailored to your interests. Participate and earn extra points. Start now!</div>
+                <div style={{width: 815, left: 150, top: 659, position: 'absolute', color: '#333333', fontSize: 14, fontFamily: 'revert', fontWeight: '400', wordWrap: 'break-word'}}>Discover surveys tailored to your interests. Participate and earn extra points. Start now!</div>
                 <div style={{left: 214}}>< QuickSurveyEmpty/></div>
             </div>
         </div>

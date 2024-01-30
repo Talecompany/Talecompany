@@ -8,6 +8,8 @@ import Surveys from "./Surveys";
 import Dashboard from "./Dashboard";
 import SurveyDetail from "./SurveyDetail";
 import Datasecurity from "./Datasecurity";
+import Focusgroup from "./Focusgroup";
+import Awards from "./Awards";
 
 function App() {
     return (
@@ -18,6 +20,8 @@ function App() {
                 <Route path="/assistance/:iduser" element={<Assistance />} />
                 <Route path="/surveydetails/:iduser" element={<SurveyDetail />} />
                 <Route path="/dataverification/:iduser" element={<Datasecurity />} />
+                <Route path="/focusgroup/:iduser" element={<Focusgroup />} />
+                <Route path="/awards/:iduser" element={<Awards />} />
             </Routes>
         </Router>
     );
