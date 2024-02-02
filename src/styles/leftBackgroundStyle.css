@@ -13,7 +13,7 @@
 
 }
 
-.forgetPwd {
+.mainText {
     color: #FFF;
     font-family: "Avenir Next LT Pro";
     font-size: 62px;
@@ -58,3 +58,20 @@
 
 }
 
+
+.languageStyle {
+    display: inline-flex;
+    padding: 8px;
+    align-items: center;
+    gap: 4px;
+    border-radius: 10px;
+    width: Hug (83px);
+    height: Hug (48px);
+    top: 8px;
+    left: 1189px;
+    padding: 8px;
+    border-radius: 10px;
+    position: relative;
+    gap: 4px;
+
+}
