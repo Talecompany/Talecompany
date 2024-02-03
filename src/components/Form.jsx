@@ -194,7 +194,6 @@ function Form() {
                                 <div>
                                     <Button type="submit" />
                                 </div>
-
                             </form>
                             <div style={{ color: '#666666', textAlign: 'center', paddingTop: '20px' }}>Have an account? <Link to="/login" style={{ color: '#000000' }}>
                                 <strong> Sign-In</strong>
@@ -220,7 +219,7 @@ function Form() {
                                         <strong>
                                             Password</strong>
                                     </label>
-                                    <div style={{ display: "flex", paddingTop: "15px" }}>
+                                    <div style={{ display: "flex", paddingTop: "15px", position: "relative" }}>
                                         <input
                                             type={showPassword ? 'text' : 'password'}
                                             className="form-control"
@@ -232,7 +231,7 @@ function Form() {
                                                 validatePassword();
                                             }}
                                         />
-                                        <div style={{ paddingTop: '11px' }}>
+                                        <div style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', paddingTop: '11px' }}>
                                             {/* Utilisez l'icône de l'oeil pour montrer/masquer le mot de passe */}
                                             {showPassword ? (
                                                 <FaEyeSlash
