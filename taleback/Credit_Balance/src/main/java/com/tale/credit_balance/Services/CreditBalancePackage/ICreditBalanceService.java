@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 
 public interface ICreditBalanceService {
     //ADD
-    public CreditBalance addduty(CreditBalance creditBalance) throws IOException;
+    public CreditBalance addCurr(CreditBalance creditBalance) throws IOException;
 
     BigDecimal retrieveCreditBalance(long id);
 

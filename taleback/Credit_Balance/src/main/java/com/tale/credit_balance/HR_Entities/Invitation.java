@@ -1,13 +1,14 @@
 package com.tale.credit_balance.HR_Entities;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.annotation.Nonnull;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
 import java.io.Serializable;
-import java.util.List;
+import java.util.Date;
 
 
 @Entity
@@ -15,24 +16,16 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class User implements Serializable {
+public class Invitation implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id_User;
+    private int id_inv;
 
     @Nonnull
-    private String Nom;
+    private Date dateinv;
 
     @Nonnull
-    private String Prenom;
-
-    @Nonnull
-    private String email;
-
-    @OneToMany(mappedBy ="user")
-    @JsonIgnore
-    private List<Invitation> InvList;
-
-    @ManyToMany
-    private List<FocusGroup> focusGroups;
+    private Boolean Etat;
+    @ManyToOne
+    private User user;
 }

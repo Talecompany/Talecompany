@@ -31,9 +31,9 @@ public class ICreditBalanceServiceIMP implements ICreditBalanceService {
 
 
     @Override
-    public CreditBalance addduty(CreditBalance duty) throws IOException {
+    public CreditBalance addCurr(CreditBalance creditBalance) throws IOException {
 
-        return creditBalanceRepository.save(duty);
+        return creditBalanceRepository.save(creditBalance);
     }
     @Override
     public BigDecimal retrieveCreditBalance(long id)  {
@@ -49,18 +49,18 @@ public class ICreditBalanceServiceIMP implements ICreditBalanceService {
         String currency = creditBalance.getCurrency();
         return currency;
     }
-    @Scheduled(fixedRate = 5000)
-    public void mm() throws MessagingException, jakarta.mail.MessagingException {
-        List<User> users = userRepository.findAll();
-        for(User u:users)
-        {
-            emailSender.sendEmail(u.getEmail(),u," successfully processed. <h4>\nCongratulation, We inform you very carefully that your complaint has been accepted. \n<h4>");
-            // Notify clients through WebSocket
-
-            // Notify frontend
-            notifyFrontend(u.getId_User());
-        }
-    }
+//    @Scheduled(fixedRate = 5000)
+//    public void mm() throws MessagingException, jakarta.mail.MessagingException {
+//        List<User> users = userRepository.findAll();
+//        for(User u:users)
+//        {
+//            emailSender.sendEmail(u.getEmail(),u," successfully processed. <h4>\nCongratulation, We inform you very carefully that your complaint has been accepted. \n<h4>");
+//            // Notify clients through WebSocket
+//
+//            // Notify frontend
+//            notifyFrontend(u.getId_User());
+//        }
+//    }
     private void notifyFrontend(int userId) {
         // Utilisez SimpMessagingTemplate pour envoyer un message à un endpoint spécifique sur le frontend
         messagingTemplate.convertAndSendToUser(String.valueOf(userId), "/topic/notification", "New notification");
