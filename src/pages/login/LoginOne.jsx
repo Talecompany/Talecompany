@@ -2,11 +2,13 @@ import React, { useState } from 'react'
 
 import SocialMedia from '../../components/SocialMedia';
 import LeftBackground from '../../components/LeftBackground';
+import { useParams } from 'react-router-dom';
 
 import '../../styles/login.css'
 import { Link, useNavigate } from 'react-router-dom';
 
 function LoginOne() {
+    const { iduser } = useParams();
 
 
     const [email, setEmail] = useState('');
@@ -40,7 +42,7 @@ function LoginOne() {
     const handleSubmit = () => {
         if (isFormValid) {
             console.log('Form submitted successfully!');
-            navigate('/dashboard');
+            navigate(`/home/${iduser}`);
         } else {
             console.log('Form is not valid. Errors:');
             if (emailError) {
