@@ -143,7 +143,7 @@ const ContactForm = () => {
                             country={'fr'}
                             value={formData.numero}
                             onChange={(value, data) => handleCountryChange(value, data)}
-                            inputStyle={{ position:"relative",top:0, right:70,height:50, border: 0, width: 385, marginLeft: 10, background: 'rgba(17, 17, 17, 0.10)', borderRadius: 10, padding: '10px' }}
+                            inputStyle={{ position:"relative",top:0, right:115,height:50, border: 0, width: 385, marginLeft: 10, background: 'rgba(17, 17, 17, 0.10)', borderRadius: 10, padding: '10px' }}
                         />
                         {/*<div style={{ left: 16, top: 41, position: 'absolute', color: 'rgba(0, 0, 0, 0.40)', fontSize: 14, fontFamily: 'revert', fontWeight: '400', wordWrap: 'break-word' }}>{predefinedMessages.numero}</div>*/}
                     </label>

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import SidebarButton from './SidebarButton';
 import { fetchBalanceInLocaleCurrency } from './Api';
-import './dashboard.css';  // Import the CSS file
+import './App.css';  // Import the CSS file
 import { useNavigate } from 'react-router-dom';
 
 // Importez la bibliothèque country-currency-map

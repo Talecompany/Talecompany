@@ -2,7 +2,7 @@ import React from "react";
 
 const SidebarButtonHide = ({ label, icon, active, onClick }) => {
     const buttonStyle = {
-        width: 35,
+        width: 40,
         paddingTop: 10,
         paddingBottom: 10,
         paddingLeft: 8,

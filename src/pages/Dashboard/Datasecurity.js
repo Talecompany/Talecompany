@@ -29,7 +29,7 @@
 // Home.js or your component for the home page
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import './dashboard.css';  // Import the CSS file
+import './App.css';  // Import the CSS file
 import { useNavigate } from 'react-router-dom';
 import ContactForm from './ContactForm';
 import MoralContract from './MoralContract';

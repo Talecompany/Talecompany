@@ -1,7 +1,7 @@
 // Home.js or your component for the home page
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import './dashboard.css';  // Import the CSS file
+import './App.css';  // Import the CSS file
 
 import Header from "./Header";
 import Leftsidebar from "./Leftsidebar";

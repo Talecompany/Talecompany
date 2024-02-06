@@ -2,7 +2,7 @@ import React from "react";
 
 const SidebarButton = ({ label, icon, active, onClick }) => {
     const buttonStyle = {
-        width: 195,
+        width: 240,
         paddingTop: 10,
         paddingBottom: 10,
         paddingLeft: 8,
