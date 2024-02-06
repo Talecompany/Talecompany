@@ -88,24 +88,29 @@ function ForgotPasswordOne() {
             <span className="forgotPasswordInfo">
                 Kindly provide the email address linked to your account. We will send you instructions via email on how to reset your password
             </span>
-            <div className="forgotPasswordForm">
-                <label style={titleStyle}>Email Address</label>
+            <form action="/forgotpassword" method="post" onSubmit={handleForgotPassword}>
+                <div className="forgotPasswordForm">
+                    <label style={titleStyle}>Email Address</label>
+                    <input
+                        style={placeholderStyle}
+                        type="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        value={email}
+                        onChange={handleEmailChange}
+                    />
+                    {emailError && <p style={errorStyle}>{emailError}</p>}
+                </div>
+                <div className="sendEmailButton">
+                    <button
+                        style={buttonStyle}
+                        type="submit"  {/* Ensure that the button triggers form submission */}
+                        disabled={!!emailError}>
+                        Send Email
+                    </button>
+                </div>
+            </form>
 
-                <input style={placeholderStyle}
-                    type="email"
-                    placeholder="Enter your email"
-                    value={email}
-                    onChange={handleEmailChange}
-                />
-                {emailError && <p style={errorStyle}>{emailError}</p>}
-            </div>
-            <div className="sendEmailButton">
-                <button style={buttonStyle}
-                    disabled={!!emailError}
-                    onClick={handleForgotPassword}>
-                    Send Email
-                </button>
-            </div>
             <div className="rememberPassword">
                 <span>Remember Password? </span>
                 <span style={{ color: "#000", fontWeight: "600", }}>

@@ -1,8 +1,7 @@
 .leftBg {
-    width: 411px;
-    height: 816px;
-    top: 8px;
-    left: 861px;
+    width: 100%;
+    max-width: 411px; /* Set a maximum width for larger screens */
+    height: auto; /* Allow the height to adjust based on content */
     border-radius: 30px;
     display: flex;
     flex-direction: column;
@@ -10,7 +9,6 @@
     position: absolute;
     top: 8px;
     left: 8px;
-
 }
 
 .mainText {
@@ -64,18 +62,17 @@
 
 
 .languageStyle {
-    display: inline-flex;
-    padding: 8px;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+    justify-content: center;
     align-items: center;
     gap: 4px;
     border-radius: 10px;
-    width: Hug (83px);
-    height: Hug (48px);
+    width: auto; /* Allow the width to adjust based on content */
+    height: auto; /* Allow the height to adjust based on content */
+    position: absolute;
     top: 8px;
-    left: 1189px;
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
     padding: 8px;
-    border-radius: 10px;
-    position: relative;
-    gap: 4px;
-
 }
