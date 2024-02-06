@@ -104,7 +104,7 @@ function ForgotPasswordOne() {
                 <div className="sendEmailButton">
                     <button
                         style={buttonStyle}
-                        type="submit"  {/* Ensure that the button triggers form submission */}
+                        type="submit"  
                         disabled={!!emailError}>
                         Send Email
                     </button>
