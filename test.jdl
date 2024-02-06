@@ -1,0 +1,93 @@
+application {
+    config {
+        baseName tale 
+        packageName com.tale.backend
+        buildTool maven
+        clientFramework vue
+        serverPort 7676
+        applicationType monolith
+        prodDatabaseType postgresql
+        testFrameworks [cypress] 
+    }
+}
+entity NormalUser {
+    userId Integer,
+    username String,
+    email String,
+    firstname String,
+    lastname String,
+    age Integer,
+    job String,
+    gender String,
+    address String
+}
+
+entity AdminUser {
+    adminId Integer
+}
+
+entity Campaign {
+    campaignId Integer,
+    title String,
+    startDate ZonedDateTime,
+    endDate ZonedDateTime
+}
+
+entity Survey {
+    surveyId Integer,
+    title String
+}
+
+entity Section {
+    sectionId Integer,
+    title String
+}
+
+entity Question {
+    questionId Integer,
+    text String
+}
+
+entity Responses {
+    responseId Integer,
+    answer String
+}
+
+entity OurDatabases {
+    databaseId Integer,
+    name String
+}
+
+entity Notification {
+    notificationId Integer,
+    message String
+}
+
+entity Analyticss {
+    analyticsId Integer,
+    isready Boolean,
+    insights String
+}
+
+relationship OneToMany {
+    AdminUser{campaign} to Campaign
+    Campaign{survey} to Survey
+    Campaign{analytics} to Analyticss
+    Survey{section} to Section
+    Section{question} to Question
+    Section{analytics} to Analyticss
+    Question{response} to Responses
+    NormalUser{response} to Responses
+    NormalUser{notification} to Notification
+    Campaign{user} to NormalUser
+    OurDatabases{surveyDatabase} to Survey
+    OurDatabases{responseDatabase} to Survey
+    Responses{analytics} to Analyticss
+}
+
+relationship ManyToMany {
+    NormalUser{participatedSurvey} to Survey{participants}
+}
+
+// Set pagination options
+paginate NormalUser, AdminUser, Campaign, Survey, Section, Question, Responses, OurDatabases, Notification, Analyticss with infinite-scroll
