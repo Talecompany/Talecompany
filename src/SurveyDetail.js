@@ -3,6 +3,7 @@ import 'react-quill/dist/quill.snow.css';
 import Leftsidebar from "./Leftsidebar";
 import {useNavigate, useParams} from "react-router-dom";
 import Header from "./Header";
+import LanguagePage from "./LanguagePage";
 
 const Container = ({ children }) => (
     <div className="Appsd">
@@ -38,9 +39,17 @@ const SurveyDetail = () => {
     const toggleSidebar = () => {
         setSidebarVisible(!sidebarVisible);
     };
+
+    const [showLanguageComponent, setShowLanguageComponent] = useState(false);
+
     const handleBackClick = () => {
         // Redirect to /Surveys/:iduser
         navigate(`/Surveys/${iduser}`);
+    };
+
+    const handleStartClick = () => {
+        // Hide all styles and show the language component
+        setShowLanguageComponent(true);
     };
     // Constants
     const borderRadius = 16;
@@ -52,8 +61,9 @@ const SurveyDetail = () => {
     return (
         <Container>
             <Leftsidebar sidebarVisible={sidebarVisible} toggleSidebar={toggleSidebar} />
-            <Header/>
-            <div style={{ left: 100, width: '80%', height: '100%', position: 'relative', background: '#EFEFEF',marginLeft: !sidebarVisible ? -100 : 0, transition: 'margin-left 0.3s ease' }}>
+            <Header />
+            {!showLanguageComponent && (
+                <div style={{ left: 100, width: '80%', height: '100%', position: 'relative', background: '#EFEFEF', marginLeft: !sidebarVisible ? -100 : 0, transition: 'margin-left 0.3s ease' }}>
             {/* Background elements */}
             <div style={{ width: 1400, height: 736, left: 250, top: 80, position: 'absolute', background: 'white', borderRadius: 16 }} />
             <img
@@ -94,11 +104,13 @@ const SurveyDetail = () => {
         </span>
             </div>
 
-            {/* Start button */}
-            <div style={{ width: 170, padding: 16, left: 1420, top: 749, position: 'absolute', background: gradientColor, borderRadius: 10, justifyContent: 'center', alignItems: 'center', display: 'inline-flex' }}>
-                <div style={{ color: 'white', fontSize: 14, fontFamily: 'revert', fontWeight: '600', wordWrap: 'break-word' }}>Start</div>
+                {/* Start button */}
+                <div onClick={handleStartClick} style={{ width: 170, padding: 16, left: 1420, top: 749, position: 'absolute', background: gradientColor, borderRadius: 10, justifyContent: 'center', alignItems: 'center', display: 'inline-flex', cursor: 'pointer' }}>
+                    <div style={{ color: 'white', fontSize: 14, fontFamily: 'revert', fontWeight: '600', wordWrap: 'break-word' }}>Start</div>
+                </div>
             </div>
-            </div>
+            )}
+            {showLanguageComponent && <LanguagePage />}
         </Container>
     );
 };

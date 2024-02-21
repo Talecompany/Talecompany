@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import './App.css'; // Import the CSS file
-
-import Header from './Header';
-import Leftsidebar from './Leftsidebar';
+import './App.css';
+import Leftsidebar from "./Leftsidebar";
+import Header from "./Header"; // Import the CSS file
 
 const Verylikely = () => {
     const { iduser } = useParams();
@@ -47,6 +46,8 @@ const Verylikely = () => {
 
     return (
         <div className="App">
+            <Leftsidebar sidebarVisible={sidebarVisible} toggleSidebar={toggleSidebar} style={{filter: showConfirmation ? 'blur(5px)' : 'none'}} />
+
             <div
                 style={{
                     width: '100%',
@@ -57,6 +58,7 @@ const Verylikely = () => {
                     transition: 'margin-left 0.3s ease',
                 }}
             >
+                <Header/>
                 <div
                     style={{
                         width: 1400,
