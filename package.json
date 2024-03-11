@@ -38,6 +38,7 @@
     "react-intl": "^6.6.2",
     "react-phone-input-2": "^2.15.1",
     "react-quill": "^2.0.0",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.21.3",
     "react-scripts": "5.0.1",
     "react-slick": "^0.30.2",

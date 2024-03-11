@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Register from './pages/Register';
 import LoginOne from './pages/login/LoginOne';
@@ -43,6 +42,13 @@ import OneanswerSurv from './pages/Dashboard/OneanswerSurv';
 import EarnsPage from './pages/Dashboard/EarnsPage';
 import Verylikely from './pages/Dashboard/Verylikely';
 import EmojiComponent from './components/Emoji';
+import DashboardSurvery101 from './pages/Dashboard/Tale-4-Dashboard-1-Survery-10-1';
+import DashboardSurvery909 from  './pages/Dashboard/Tale-4-Dashboard-1-Survery909';
+import DashboardSurvery9090 from  './pages/Dashboard/Tale-4-Dashboard-1-Survery90-9';
+import Jitci from './pages/Dashboard/jitci';
+import PointsDashboard from './pages/Points/PointsDashboard';
+import PhoneRecharge from './pages/Points/PhoneRecharges';
+import CouponRecharge from './pages/Points/RechargeCoupons';
 const routes = createBrowserRouter([
   {
     path: "/register", element: <Register />,
@@ -87,7 +93,7 @@ const routes = createBrowserRouter([
 },
 {path: "/dashboard60", element: <DashboardSurvery60 />,
 },
-{path: "/dashboard70", element: <DashboardSurvery70 />,
+{path: "/dashboard70", element: <DashboardSurvery70 />, 
 },
 {path: "/DashboardSurveryDetail", element: <DashboardSurveryDetail />,
 },
@@ -117,6 +123,8 @@ const routes = createBrowserRouter([
 },
 {path: "/dashboard908", element: <DashboardSurvery908 />,
 },
+{path: "/dashboard9090", element: <DashboardSurvery9090 />,
+},
 {path:"/surveydetails/:iduser", element: <SurveyDetail />,},
 { path: "/dataverification/:iduser", element: <Datasecurity /> },
 { path: "/focusgroup/:iduser", element: <Focusgroup /> },
@@ -127,7 +135,12 @@ const routes = createBrowserRouter([
 { path: "/generallyspeaking/:iduser", element: <OneanswerSurv /> },
 { path: "/endsurvey/:iduser", element: <EarnsPage /> },
 { path: "/very/:iduser", element: <Verylikely /> },
-{ path: "/EmojiComponent", element: <EmojiComponent /> },
+{ path: "/DashboardSurvery101", element: <DashboardSurvery101 /> },
+{ path: "/Dashboard909", element: <DashboardSurvery909 /> },
+{ path: "/jitci", element: <Jitci /> },
+{ path: "/Points/:iduser", element: <PointsDashboard /> },
+{ path: "/PhoneRecharge/:iduser", element: <PhoneRecharge /> },
+{ path: "/CouponRecharge/:iduser", element: <CouponRecharge /> },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
