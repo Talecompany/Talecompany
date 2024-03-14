@@ -3,7 +3,11 @@ import Emoji_smile from "../images/Emoji_smile.png";
 import Emoji_love from "../images/Emoji_love.png";
 import Emoji_sad from "../images/Emoji_sad.png";
 import Emoji_pocker from "../images/Emoji_pocker.png";
+<<<<<<< HEAD
 import Emoji_angry from "../images/Emoji_angry.png";
+=======
+import Emoji_angry from "../images/emoji_angry.png";
+>>>>>>> origin/FrontEnd-Chadi
 const EmojiComponent = ({ onEmojiSelect, selectedEmoji }) => {
     const emojis = [
         { name: 'Emoji_angry', src: Emoji_angry },

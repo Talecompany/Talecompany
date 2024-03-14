@@ -5,7 +5,11 @@ import emojilaugh from '../images/emoji@2x-1.png';
 import emojipocker from '../images/emoji-2.png';
 import emojisad from '../images/emoji-3.png';
 import emojismile from '../images/emoji-6.png';
+<<<<<<< HEAD
 import emojiangry from '../images/Emoji_angry.png';
+=======
+import emojiangry from '../images/emoji_angry.png';
+>>>>>>> origin/FrontEnd-Chadi
 
 const EmojiComponent = ({ onEmojiSelect, selectedEmoji }) => {
   const emojis = [

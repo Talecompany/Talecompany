@@ -29,7 +29,11 @@ import image200 from "../../images/image200.png"
 
 import points20 from "../../images/Points20-200.png";
 
+<<<<<<< HEAD
 import ConfirmationPopup from "../Dashboard/PointsConversionPopup";
+=======
+
+>>>>>>> origin/FrontEnd-Chadi
 
 
 const PhoneRecharge  = () => {

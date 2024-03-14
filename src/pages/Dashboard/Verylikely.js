@@ -4,10 +4,16 @@ import './App.css';
 import Leftsidebar from "./Leftsidebar";
 import Header from "./Header"; // Import the CSS file
 
+<<<<<<< HEAD
 const Verylikely = () => {
     const { iduser } = useParams();
     const [sidebarVisible, setSidebarVisible] = useState(true);
     const [selectedRate, setSelectedRate] = useState(null);
+=======
+const Verylikely = ({  selectedRate, onRateSelect, onNext, onPrevious  }) => {
+    const { iduser } = useParams();
+    const [sidebarVisible, setSidebarVisible] = useState(true);
+>>>>>>> origin/FrontEnd-Chadi
     const [showConfirmation, setShowConfirmation] = useState(false);
 
     const toggleSidebar = () => {
@@ -15,6 +21,7 @@ const Verylikely = () => {
     };
 
     const handleRateSelect = (rate) => {
+<<<<<<< HEAD
         setSelectedRate(selectedRate === rate ? null : rate); // Deselect rate if already selected
     };
     const [selectedLanguage, setSelectedLanguage] = useState('');
@@ -28,6 +35,21 @@ const Verylikely = () => {
         setShowConfirmation(true);
     };
 
+=======
+        onRateSelect(rate); // Pass selected rate back to parent component
+    };
+    const [selectedLanguage, setSelectedLanguage] = useState('');
+   
+    const handleLanguageChange = (language) => {
+        setSelectedLanguage(language);
+    };
+    const handlePrevious = () => {
+        onPrevious(); // Call onPrevious function passed via props
+    };
+    const handleNext = () => {
+        onNext(); // Call onNext function passed via props
+    };
+>>>>>>> origin/FrontEnd-Chadi
 
     // Define the rates for selection
     const rates = [
@@ -76,7 +98,11 @@ const Verylikely = () => {
                         <div style={{ width: 172, height: 46, left: 68, top: 20, position: 'absolute', color: '#111111', fontSize: 14, fontFamily: 'revert', fontWeight: '700', lineHeight: 1, wordWrap: 'break-word' }}>Tunisie Telecom</div>
                         <div style={{position:"relative",top:25,left:975,width: 350, height: '100%', border: '3px rgba(0, 0, 0, 0.10) solid'}}></div>
                         <div style={{position:"relative",top:19,left:975,width: 125, height: '100%', border: '3px #00BDA9 solid'}}></div>
+<<<<<<< HEAD
                         <div style={{position:"relative",top:6,left:1310,color: '#111111', fontSize: 14, fontFamily: 'revert', fontWeight: '600', wordWrap: 'break-word'}}>30%</div>
+=======
+                        <div style={{position:"relative",top:6,left:1310,color: '#111111', fontSize: 14, fontFamily: 'revert', fontWeight: '600', wordWrap: 'break-word'}}>20%</div>
+>>>>>>> origin/FrontEnd-Chadi
                     </div>
                     <div style={{position:"relative",top:170,width: '100%', textAlign: 'center', color: 'black', fontSize: 18, fontFamily: 'revert', fontWeight: '700', lineHeight: 1, wordWrap: 'break-word'}}>Between 0 and 10, to what extent would you recommend ABCD to those <br></br> around you?</div>
                     <div style={{position:"relative",top:170,width: '100%', textAlign: 'center', color: '#666666', fontSize: 14, fontFamily: 'revert', fontWeight: '400', lineHeight: 2.5, wordWrap: 'break-word'}}>(With 0 “not at all/not at all likely” & 10 “without hesitation/Very likely”)</div>                    {/* Loop through rates and create selectable elements */}

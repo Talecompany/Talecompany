@@ -352,7 +352,11 @@ const PointsDashboard = () => {
                     <div style={historyTextStyle}>History</div>
                 </div>
                 <div style={{ ...buttonStyle, top: "520px", left: "1460px" }}>
+<<<<<<< HEAD
                 <Link to={`/CouponRecharge/${iduser}`}>
+=======
+                <Link to={`/PhoneRecharge/${iduser}`}>
+>>>>>>> origin/FrontEnd-Chadi
                     <span style={buttonTextStyle}>Convert</span>
                     </Link>
                 </div>

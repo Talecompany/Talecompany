@@ -1,14 +1,25 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { useParams } from 'react-router-dom';
+=======
+import { useParams, useNavigate } from 'react-router-dom';
+>>>>>>> origin/FrontEnd-Chadi
 import './App.css';  // Import the CSS file
 
 import Header from "./Header";
 import Leftsidebar from "./Leftsidebar";
 import ConfirmationPopup from "./ConfirmationPopup";
+<<<<<<< HEAD
 import {Button} from "@mui/material";
 
 const LanguagePage = () => {
     const { iduser } = useParams();
+=======
+
+const LanguagePage = () => {
+    const { iduser } = useParams();
+    const navigate = useNavigate(); // Hook for navigation
+>>>>>>> origin/FrontEnd-Chadi
     const [sidebarVisible, setSidebarVisible] = useState(true);
     const [selectedLanguage, setSelectedLanguage] = useState('');
     const [showConfirmation, setShowConfirmation] = useState(false);
@@ -33,7 +44,13 @@ const LanguagePage = () => {
         // Your logic for validation goes here
         console.log("Validated");
         setShowConfirmation(false);
+<<<<<<< HEAD
     };
+=======
+        navigate('/dashboard10'); // Redirect to dashboard10 after validation
+    };
+
+>>>>>>> origin/FrontEnd-Chadi
     return (
         <div className="App">
             <div style={{filter: showConfirmation ? 'blur(5px)' : 'none' }}>
@@ -67,6 +84,7 @@ const LanguagePage = () => {
                             </label>
                         </div>
                     </div>
+<<<<<<< HEAD
                     <Button style={{border: '2px solid #00BDA9',position:"relative",left:-520,top:220,width: '11.5%', height: '6.5%', padding: 16, background: 'white', borderRadius: 10, justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}   onClick={() => { window.location.href = `/dataverification/${iduser}`; }}
                     >
                         <div style={{color: '#00BDA9', fontSize: 14, fontFamily: 'revert', fontWeight: '600', wordWrap: 'break-word'}}>Previous</div>
@@ -75,6 +93,12 @@ const LanguagePage = () => {
                     {/*<button onClick={handleNext} style={{position:"relative",left:520,top:220,width: '8%', height: '2%', padding: 16, background: 'linear-gradient(90deg, #00BDA9 0%, #00C0FC 100%)', borderRadius: 10, justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>*/}
                     {/*    <span style={{color: 'white', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '600', wordWrap: 'break-word'}}>Next</span>*/}
                     {/*</button>*/}
+=======
+                    <button style={{border: '2px solid #00BDA9',position:"relative",left:-520,top:220,width: '11.5%', height: '6.5%', padding: 16, background: 'white', borderRadius: 10, justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}   onClick={() => { window.location.href = `/dataverification/${iduser}`; }}>
+
+                        <div style={{color: '#00BDA9',  fontSize: 14, fontFamily: 'revert', fontWeight: '600', wordWrap: 'break-word'}}>Previous</div>
+                    </button>
+>>>>>>> origin/FrontEnd-Chadi
                     <button onClick={handleNext} style={{borderColor:"transparent",color: 'white', fontSize: 14, fontFamily: 'revert', fontWeight: '600', wordWrap: 'break-word',position:"relative",left:520,top:220,width: '13%', height: '7%', padding: 16, background: 'linear-gradient(90deg, #00BDA9 0%, #00C0FC 100%)', borderRadius: 10, justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}> Next</button>
                 </div>
             </div>
@@ -84,3 +108,7 @@ const LanguagePage = () => {
 };
 
 export default LanguagePage;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/FrontEnd-Chadi

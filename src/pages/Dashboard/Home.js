@@ -114,10 +114,14 @@ const Home = () => {
             // Redirection vers la route avec l'id utilisateur
             navigate(`/assistance/${iduser}`);
         }
+<<<<<<< HEAD
         if( label==='Awards'){
                  navigate(`/Points/${iduser}`);
 
         }
+=======
+        // Add specific code to execute when the button is clicked
+>>>>>>> origin/FrontEnd-Chadi
     };
 
     const toggleSidebar = () => {
@@ -155,9 +159,13 @@ const Home = () => {
                 <div style={{ left: 24, top: 88, position: 'absolute', borderRadius: 10, flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'flex-start', gap: 1, display: 'inline-flex' }}>
                     <SidebarButton label="Dashboard" icon="image3.png" active={activeButton === 'Dashboard'} onClick={() => handleButtonClick('Dashboard')} />
                     <SidebarButton label="Surveys" icon="image12.png" active={activeButton === 'Surveys'} onClick={() => handleButtonClick('Surveys')} />
+<<<<<<< HEAD
            
                     <SidebarButton label="Focus group" icon="image13.png" active={activeButton === 'Focus group'} onClick={() => handleButtonClick('Focus group')} />
                 
+=======
+                    <SidebarButton label="Focus group" icon="image13.png" active={activeButton === 'Focus group'} onClick={() => handleButtonClick('Focus group')} />
+>>>>>>> origin/FrontEnd-Chadi
                     <SidebarButton label="Awards" icon="image14.png" active={activeButton === 'Awards'} onClick={() => handleButtonClick('Awards')} />
                 </div>
                 <div style={{ width: 200, paddingTop: 8, paddingBottom: 8, paddingLeft: 0, left: 24, top: 677, position: 'absolute', borderRadius: 10, justifyContent: 'flex-start', alignItems: 'center', gap: 8, display: 'inline-flex' }}>

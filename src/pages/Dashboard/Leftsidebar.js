@@ -69,7 +69,11 @@ const Leftsidebar = ({ sidebarVisible, toggleSidebar }) => {
                     <Link to={`/Focusgroup/${iduser}`}>
                     <SidebarButton label="Focus group" icon="image13.png" active={activeButton === 'Focus group'} onClick={() => handleButtonClick('Focus group')} />
                     </Link>
+<<<<<<< HEAD
                     <Link to={`/Points/${iduser}`}>
+=======
+                    <Link to={`/Awards/${iduser}`}>
+>>>>>>> origin/FrontEnd-Chadi
                         <SidebarButton label="Awards" icon="image14.png" active={activeButton === 'Awards'} onClick={() => handleButtonClick('Awards')} />
                     </Link>
                 </div>
@@ -93,14 +97,22 @@ const Leftsidebar = ({ sidebarVisible, toggleSidebar }) => {
             {sidebarVisible ? (
                 // Regular SidebarButton when sidebar is visible
                 <div style={{ width: 250, paddingTop: 8, paddingBottom: 8, paddingLeft: 0, left: 24, top: 677, position: 'absolute', borderRadius: 10, justifyContent: 'flex-start', alignItems: 'center', gap: 8, display: 'inline-flex' }}>
+<<<<<<< HEAD
                     <Link to={`/AssistanceO/${iduser}`}>
+=======
+                    <Link to={`/Assistance/${iduser}`}>
+>>>>>>> origin/FrontEnd-Chadi
                     <SidebarButton label="Assistance" icon="assistance.png" active={activeButton === 'Assistance'} onClick={() => handleButtonClick('Assistance')} />
                     </Link>
                 </div>
             ) : (
                 // SidebarButtonHide when sidebar is hidden
                 <div style={{ width: 250, paddingTop: 8, paddingBottom: 8, paddingLeft: 0, left: 35, top: 677, position: 'absolute', borderRadius: 10, justifyContent: 'flex-start', alignItems: 'center', gap: 8, display: 'inline-flex' }}>
+<<<<<<< HEAD
                     <Link to={`/AssistanceO/${iduser}`}>
+=======
+                    <Link to={`/Assistance/${iduser}`}>
+>>>>>>> origin/FrontEnd-Chadi
                     <SidebarButtonHide label="Assistance" icon="assistance.png" active={activeButton === 'Assistance'} onClick={() => handleButtonClick('Assistance')} />
                     </Link>
                 </div>

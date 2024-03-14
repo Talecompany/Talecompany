@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/FrontEnd-Chadi
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import '../../App.css';  // Import the CSS file

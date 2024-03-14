@@ -16,6 +16,7 @@ import OpinionSurvey from "./OpinionSurvey";
 import OneanswerSurv from "./OneanswerSurv";
 import EarnsPage from "./EarnsPage";
 import Verylikely from "./Verylikely";
+<<<<<<< HEAD
 import LiveSurvey from "./LiveSurvey";
 import VerylikelyVierge from "./VerylikelyVierge";
 import LiveSurvey1 from "./LiveSurvey1";
@@ -24,6 +25,8 @@ import Headcomponent from "./Headcomponent";
 import Policy from "./Policy";
 import Changepwd from "./Changepwd";
 import Assistancechangepwd from "./Assistancechangepwd";
+=======
+>>>>>>> origin/FrontEnd-Chadi
 
 function App() {
     return (
@@ -41,6 +44,7 @@ function App() {
                 <Route path="/opinionsurvey/:iduser" element={<OpinionSurvey />} />
                 <Route path="/generallyspeaking/:iduser" element={<OneanswerSurv />} />
                 <Route path="/endsurvey/:iduser" element={<EarnsPage />} />
+<<<<<<< HEAD
                 <Route path="/very/:iduser" element={<VerylikelyVierge />} />
                 <Route path="/livesurvey/:iduser" element={<LiveSurvey />} />
                 <Route path="/livesurvey1/:iduser" element={<LiveSurvey1 />} />
@@ -48,6 +52,9 @@ function App() {
                 <Route path="/policy/:iduser" element={<Policy />} />
                 <Route path="/account/:iduser" element={<Assistance />} />
                 <Route path="/account1/:iduser" element={<Assistancechangepwd />} />
+=======
+                <Route path="/very/:iduser" element={<Verylikely />} />
+>>>>>>> origin/FrontEnd-Chadi
 
 
             </Routes>

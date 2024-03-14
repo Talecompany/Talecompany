@@ -72,7 +72,15 @@ const ContactForm = () => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     };
+<<<<<<< HEAD
 
+=======
+    //
+    // const countryOptions = countryCallingCode.map((data) => ({
+    //     value: data.alpha2,
+    //     label: `${data.name} (+${data.callingCode})`,
+    // }));
+>>>>>>> origin/FrontEnd-Chadi
 
     const handleCountryChange = (value, { dialCode }) => {
         setFormData((prevData) => ({ ...prevData, numero: `+${dialCode}` }));
@@ -99,6 +107,7 @@ const ContactForm = () => {
 
     return (
         <form onSubmit={handleSubmit} style={{ padding: 20 }}>
+<<<<<<< HEAD
             <div style={{ left: 40, top: 10, position: 'absolute', color: 'black', fontSize: 24, fontFamily: 'revert', fontWeight: '700', wordWrap: 'break-word' }}>Assistance Form</div>
 
             <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginTop: 40 }}>
@@ -106,6 +115,15 @@ const ContactForm = () => {
                 <div style={{ flex: 1, marginRight: 10, width: '100%', height: '100%', position: 'relative'}}>
                     <label>
                         <div style={{left: 20, top: -2, position: 'absolute', color: 'black', fontSize: 14, fontFamily: 'revert', fontWeight: '600', wordWrap: 'break-word'}}>First Name</div>
+=======
+            <div style={{ left: 90, top: 20, position: 'absolute', color: 'black', fontSize: 24, fontFamily: 'revert', fontWeight: '700', wordWrap: 'break-word' }}>Assistance Form</div>
+
+            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginTop: 80 }}>
+                {/* First Name */}
+                <div style={{ flex: 1, marginRight: 10, width: '100%', height: '100%', position: 'relative'}}>
+                    <label>
+                        <div style={{left: 70, top: -2, position: 'absolute', color: 'black', fontSize: 14, fontFamily: 'revert', fontWeight: '600', wordWrap: 'break-word'}}>First Name</div>
+>>>>>>> origin/FrontEnd-Chadi
                         <input type="text" name="nom" value={formData.nom} onChange={handleInputChange} style={{ border: 0, width: 400, height: 31, left: 70, top: 25, position: 'absolute', background: 'rgba(17, 17, 17, 0.10)', borderRadius: 10, padding: '10px' }} />
                         <div style={{left: 86, top: 41, position: 'absolute', color: 'rgba(0, 0, 0, 0.40)', fontSize: 14, fontFamily: 'revert', fontWeight: '400', wordWrap: 'break-word'}}>{formData.nom === '' && predefinedMessages.nom}</div>
                     </label>

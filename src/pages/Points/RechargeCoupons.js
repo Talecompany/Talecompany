@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import {useNavigate, useParams} from 'react-router-dom';
+=======
+import { useParams } from 'react-router-dom';
+>>>>>>> origin/FrontEnd-Chadi
 import Header from "../Dashboard/Header";
 import Leftsidebar from "../Dashboard/Leftsidebar";
 import gift_icon from "../../images/gift_icon.png";
@@ -33,13 +37,17 @@ import tutto from "../../images/tutto.png";
 import points20 from "../../images/Points20-200.png";
 import forty from "../../images/forty.png";
 import Onehundred from "../../images/Onehundred.png";
+<<<<<<< HEAD
 import PointsConversionPopup from "../Dashboard/PointsConversionPopup";
+=======
+>>>>>>> origin/FrontEnd-Chadi
 
 
 
 const CouponRecharge  = () => {
     const [currentPassword, setCurrentPassword] = useState('');
     const [showCurrentPassword, setShowCurrentPassword] = useState(false);
+<<<<<<< HEAD
     const [showConfirmation, setShowConfirmation] = useState(false);
     const navigate = useNavigate();
 
@@ -59,6 +67,8 @@ const CouponRecharge  = () => {
         console.log("Validated");
         setShowConfirmation(false);
     };
+=======
+>>>>>>> origin/FrontEnd-Chadi
 
     const toggleShowCurrentPassword = () => {
         setShowCurrentPassword(!showCurrentPassword);
@@ -270,10 +280,15 @@ const CouponRecharge  = () => {
     
     return (
         <div className="App">
+<<<<<<< HEAD
             <div style={{filter: showConfirmation ? 'blur(5px)' : 'none' }}>
                 <Leftsidebar sidebarVisible={sidebarVisible} toggleSidebar={toggleSidebar} style={{filter: showConfirmation ? 'blur(5px)' : 'none'}} />
             </div>
             <div style={{ width: '100%', height: '100%', position: 'relative', background: '#EFEFEF', marginLeft: !sidebarVisible ? -100 : 0, transition: 'margin-left 0.3s ease',filter: showConfirmation ? 'blur(5px)' : 'none' }}>
+=======
+            <Leftsidebar sidebarVisible={sidebarVisible} toggleSidebar={toggleSidebar} />
+            <div style={{ width: '100%', height: '100%', position: 'relative', background: '#EFEFEF', marginLeft: !sidebarVisible ? -100 : 0, transition: 'margin-left 0.3s ease' }}>
+>>>>>>> origin/FrontEnd-Chadi
                 <Header />
                 <div style={divStyle}>
                     <div style={textStyle}>630 Points</div>
@@ -351,19 +366,31 @@ const CouponRecharge  = () => {
     </div>
 
 </div>
+<<<<<<< HEAD
 <button onClick={handleNext}  style={{marginLeft:"500px",borderColor:"transparent",color: 'white', fontSize: 14, fontFamily: 'revert', fontWeight: '600', wordWrap: 'break-word', position:"relative", left:300, width: '13%', height: '7%', padding: 16, background: 'linear-gradient(90deg, #00BDA9 0%, #00C0FC 100%)', borderRadius: 10, justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}> Submit</button>
+=======
+<button  style={{marginLeft:"500px",borderColor:"transparent",color: 'white', fontSize: 14, fontFamily: 'revert', fontWeight: '600', wordWrap: 'break-word', position:"relative", left:300, width: '13%', height: '7%', padding: 16, background: 'linear-gradient(90deg, #00BDA9 0%, #00C0FC 100%)', borderRadius: 10, justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}> Submit</button>
+>>>>>>> origin/FrontEnd-Chadi
 
 </div>
 
 
 </div>
+<<<<<<< HEAD
             {showConfirmation && <PointsConversionPopup onClose={handleCloseConfirmation} onValidate={handleValidateConfirmation} />}
 
         </div>
+=======
+</div>
+>>>>>>> origin/FrontEnd-Chadi
 
 
 );
 
 };
     
+<<<<<<< HEAD
     export default CouponRecharge;
+=======
+    export default CouponRecharge;
+>>>>>>> origin/FrontEnd-Chadi

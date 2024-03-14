@@ -4,7 +4,11 @@ import Leftsidebar from "./Leftsidebar";
 import {useNavigate, useParams} from "react-router-dom";
 import Header from "./Header";
 import LanguagePage from "./LanguagePage";
+<<<<<<< HEAD
 import Datasecurity from "./Datasecurity";
+=======
+import Datasecurity from './Datasecurity';
+>>>>>>> origin/FrontEnd-Chadi
 
 const Container = ({ children }) => (
     <div className="Appsd">

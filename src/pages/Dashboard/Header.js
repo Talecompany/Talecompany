@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+<<<<<<< HEAD
 import { FaCircle } from 'react-icons/fa';
 import iconright from "../../images/Image11.png";
 import {Link} from 'react-router-dom';
+=======
+>>>>>>> origin/FrontEnd-Chadi
 
 const buttonStyle = {
     width: 120,
@@ -21,7 +24,10 @@ const buttonStyle = {
     zIndex:1,
 };
 
+<<<<<<< HEAD
   
+=======
+>>>>>>> origin/FrontEnd-Chadi
 const activeButtonStyle = {
     background: 'linear-gradient(90deg, #00BDA9 0%, #00C0FC 100%)',
     color: 'white',
@@ -36,6 +42,7 @@ const textStyle = {
 
 // Composant de la barre de notifications
 const NotificationBar = () => {
+<<<<<<< HEAD
   
     const notifications = [
         {
@@ -71,10 +78,32 @@ const NotificationBar = () => {
                     {index === 0 && <div style={{position: 'absolute', top: '50%', right: '-18px', transform: 'translateY(-50%)', width: 10, height: 10, background: '#243AFF', borderRadius: '9999px' }} />}
                 </div>
             ))}
+=======
+    // Logique pour afficher la barre de notifications
+    return (
+        <div style={{ width: 200, position: 'absolute', top: '60px', left: 1530, boxShadow: '0px 4px 14px rgba(0, 0, 0, 0.25)', background: 'white', padding: '0px', borderRadius: '8px', zIndex: 1 }}>
+            {/* Contenu de la barre de notifications */}
+            <p style={{ ...textStyle, background: 'linear-gradient(90deg, #00BDA9 0%, #00C0FC 100%)', color: 'white', padding: '6px' }}>Notifications</p>
+            <hr style={{ height: '1px', border: 'none', color: '#ccc', backgroundColor: '#ccc', margin: '4px 0' }} />
+
+            {/* Notifications */}
+            <div style={{ marginBottom: '8px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <p style={{ ...textStyle, fontWeight: 'bold', flex: '1' }}>Nouvelle notification</p>
+                    <p style={{ ...textStyle, fontSize: '12px', color: '#FFD700', marginLeft: '8px', marginRight:5}}>27/01</p>
+                </div>
+            </div>
+
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p style={{ ...textStyle, fontWeight: 'bold', flex: '1' }}>Autre notification</p>
+                <p style={{ ...textStyle, fontSize: '12px', color: '#FFD700', marginLeft: '8px', marginRight:5}}>26/01</p>
+            </div>
+>>>>>>> origin/FrontEnd-Chadi
         </div>
     );
 };
 
+<<<<<<< HEAD
 
 // Composant de la barre utilisateur
 const UserMenu = ({ activeButton, setActiveButton }) => {
@@ -153,6 +182,33 @@ const UserMenu = ({ activeButton, setActiveButton }) => {
         </div>
 
 
+=======
+// Composant de la barre utilisateur
+const UserMenu = ({ activeButton, setActiveButton }) => {
+    // Logique pour afficher le menu utilisateur
+    return (
+        <div style={{ width: 120, position: 'absolute', top: '60px', left: 1670, boxShadow: '0px 4px 14px rgba(0, 0, 0, 0.25)', background: 'white', padding: '4px', borderRadius: '8px', zIndex:1}}>
+            {/* Options du menu utilisateur */}
+            <button
+                style={{ ...buttonStyle, ...(activeButton === 'Profil' && activeButtonStyle) }}
+                onClick={() => setActiveButton('Profil')}
+            >
+                <p style={textStyle}>Profil</p>
+            </button>
+            <button
+                style={{ ...buttonStyle, ...(activeButton === 'Settings' && activeButtonStyle) }}
+                onClick={() => setActiveButton('Settings')}
+            >
+                <p style={textStyle}>Settings</p>
+            </button>
+            <button
+                style={{ ...buttonStyle, ...(activeButton === 'About' && activeButtonStyle) }}
+                onClick={() => setActiveButton('About')}
+            >
+                <p style={textStyle}>About</p>
+            </button>
+        </div>
+>>>>>>> origin/FrontEnd-Chadi
     );
 };
 
@@ -180,8 +236,12 @@ const Header = () => {
             {/* Barre de notifications */}
             <div style={{ padding: 8, left: 1656, top: 20, position: 'absolute', borderRadius: 20, justifyContent: 'flex-start', alignItems: 'flex-start', gap: 16, display: 'inline-flex' }}>
                 <div style={{ width: 24, height: 24, position: 'relative' }} onClick={handleNotificationClick}>
+<<<<<<< HEAD
                     {!showNotifications &&<img src={process.env.PUBLIC_URL + '/image6.png'} alt="notif" style={{ width: 24, height: 24 }} />}
                     {showNotifications &&<img src={process.env.PUBLIC_URL + '/notifactif.png'} alt="notif" style={{ position:"relative",width: 40, height: 40,top: -9,left:-7 }} />}
+=======
+                    <img src={process.env.PUBLIC_URL + '/image6.png'} alt="notif" style={{ width: '100%', height: '100%' }} />
+>>>>>>> origin/FrontEnd-Chadi
                 </div>
             </div>
             {showNotifications && <NotificationBar />}

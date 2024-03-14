@@ -13,10 +13,15 @@ import { UserProvider } from './pages/forgotPassword/UserContext';
 import HomeFull from "./pages/Dashboard/HomeFull";
 import Surveys from "./pages/Dashboard/Surveys";
 import Focusgroup from "./pages/Dashboard/Focusgroup";
+<<<<<<< HEAD
 import Awards from "./pages/Dashboard/Assistance-Register&accountmanagement";
 import Assistance from "./pages/Dashboard/Assistance";
 
 
+=======
+import Awards from "./pages/Dashboard/Awards";
+import Assistance from "./pages/Dashboard/Assistance";
+>>>>>>> origin/FrontEnd-Chadi
 import SurveyDetail from "./pages/Dashboard/SurveyDetail";
 import Datasecurity from "./pages/Dashboard/Datasecurity";
 import DashboardSurvery40 from "./pages/Dashboard/Tale-4-Dashboard-1-Survery-40";
@@ -51,6 +56,7 @@ import Jitci from './pages/Dashboard/jitci';
 import PointsDashboard from './pages/Points/PointsDashboard';
 import PhoneRecharge from './pages/Points/PhoneRecharges';
 import CouponRecharge from './pages/Points/RechargeCoupons';
+<<<<<<< HEAD
 import LiveSurvey from "./pages/Dashboard/LiveSurvey";
 import VerylikelyVierge from "./pages/Dashboard/VerylikelyVierge";
 import LiveSurvey1 from "./pages/Dashboard/LiveSurvey1";
@@ -60,6 +66,8 @@ import Policy from "./pages/Dashboard/Policy";
 import Changepwd from "./pages/Dashboard/Changepwd";
 import Assistancechangepwd from "./pages/Dashboard/Assistancechangepwd";
 import AssistanceO from './pages/Dashboard/AssistanceO';
+=======
+>>>>>>> origin/FrontEnd-Chadi
 const routes = createBrowserRouter([
   {
     path: "/register", element: <Register />,
@@ -152,6 +160,7 @@ const routes = createBrowserRouter([
 { path: "/Points/:iduser", element: <PointsDashboard /> },
 { path: "/PhoneRecharge/:iduser", element: <PhoneRecharge /> },
 { path: "/CouponRecharge/:iduser", element: <CouponRecharge /> },
+<<<<<<< HEAD
 {path:"/accountpwd/:iduser", element: <Assistancechangepwd /> },
 {path:"/account/:iduser", element: <Assistance /> },
 {path:"/policy/:iduser", element: <Policy />},
@@ -168,6 +177,8 @@ const routes = createBrowserRouter([
 
 
 
+=======
+>>>>>>> origin/FrontEnd-Chadi
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

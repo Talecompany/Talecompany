@@ -1,14 +1,24 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { useParams } from 'react-router-dom';
 import './App.css';  // Import the CSS file
 
+=======
+import { useParams, useNavigate } from 'react-router-dom';
+import './App.css';  
+>>>>>>> origin/FrontEnd-Chadi
 import Header from "./Header";
 import Leftsidebar from "./Leftsidebar";
 
 const OpinionSurvey = () => {
     const { iduser } = useParams();
+<<<<<<< HEAD
     const [sidebarVisible, setSidebarVisible] = useState(true);
     const [showConfirmation, setShowConfirmation] = useState(false);
+=======
+    const navigate = useNavigate(); // Replace useHistory with useNavigate
+    const [sidebarVisible, setSidebarVisible] = useState(true);
+>>>>>>> origin/FrontEnd-Chadi
     const [textareaContent, setTextareaContent] = useState('');
     const [charCount, setCharCount] = useState(0);
 
@@ -21,16 +31,29 @@ const OpinionSurvey = () => {
         setTextareaContent(content);
         setCharCount(content.length);
     };
+<<<<<<< HEAD
 
     const handleNext = () => {
         setShowConfirmation(true);
+=======
+    const handlePrevious = () => {
+        navigate('/dashboard10'); // Navigate to /dashboard10
+    };
+    const handleNext = () => {
+        // Add logic to save the textarea content or perform any other action if needed
+        navigate('/dashboard20'); // Navigate to /dashboard20
+>>>>>>> origin/FrontEnd-Chadi
     };
 
     const isNextDisabled = textareaContent.trim() === '' || textareaContent.length > 1000;
 
     return (
         <div className="App">
+<<<<<<< HEAD
             <Leftsidebar sidebarVisible={sidebarVisible} toggleSidebar={toggleSidebar} style={{filter: showConfirmation ? 'blur(5px)' : 'none'}} />
+=======
+            <Leftsidebar sidebarVisible={sidebarVisible} toggleSidebar={toggleSidebar} />
+>>>>>>> origin/FrontEnd-Chadi
             <div style={{width: '100%', height: '100%', position: 'relative', background: '#EFEFEF', marginLeft: !sidebarVisible ? -100 : 0, transition: 'margin-left 0.3s ease'}}>
                 <Header/>
                 <div style={{width: 1400, height: 736, left: 340, top: 80, position: 'absolute', background: 'white', borderRadius: 16}} >
@@ -60,12 +83,18 @@ const OpinionSurvey = () => {
                             {charCount}/1000
                         </div>
                     </div>
+<<<<<<< HEAD
 
                     <div style={{border: '3px solid #00BDA9',position:"relative",left:-520,top:400,width: '8%', height: '2%', padding: 16, background: 'white', borderRadius: 10, justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
                         <div style={{color: '#00BDA9', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '600', wordWrap: 'break-word'}}>Previous</div>
                     </div>
 
 
+=======
+                    <div style={{border: '3px solid #00BDA9',position:"relative",left:-520,top:400,width: '8%', height: '2%', padding: 16, background: 'white', borderRadius: 10, justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}>
+                        <div onClick={handlePrevious} style={{color: '#00BDA9', fontSize: 14, fontFamily: 'Open Sans', fontWeight: '600', wordWrap: 'break-word'}}>Previous</div>
+                    </div>
+>>>>>>> origin/FrontEnd-Chadi
                     <button onClick={handleNext} disabled={isNextDisabled} style={{color: isNextDisabled ? '#666666' : 'white', fontSize: 14, fontFamily: 'revert', fontWeight: '600', wordWrap: 'break-word',position:"relative",left:520,top:400,width: '13%', height: '7%', padding: 16, background: isNextDisabled ? 'lightgray' : 'linear-gradient(90deg, #00BDA9 0%, #00C0FC 100%)', borderRadius: 10, justifyContent: 'center', alignItems: 'center', display: 'inline-flex'}}> Next</button>
                 </div>
             </div>
@@ -74,3 +103,7 @@ const OpinionSurvey = () => {
 };
 
 export default OpinionSurvey;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/FrontEnd-Chadi
